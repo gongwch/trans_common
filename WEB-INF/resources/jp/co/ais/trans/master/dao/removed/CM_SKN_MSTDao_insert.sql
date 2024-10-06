@@ -1,0 +1,29 @@
+INSERT INTO CM_SKN_MST(
+SKN_KAI_CODE,
+SKN_CODE,
+SKN_NAME,
+SKN_NAME_S,
+SKN_NAME_K,
+SKN_SUM_KBN,
+SKN_SYU_KBN,
+SKN_SUM_CODE,
+SKN_PLN_KBN,
+SKN_INP_DATE,
+SKN_UPD_DATE,
+SKN_PRG_ID,
+SKN_USR_ID
+) VALUES (
+/*dto.SKN_KAI_CODE*/,
+/*dto.SKN_CODE*/,
+/*dto.SKN_NAME*/,
+/*dto.SKN_NAME_S*/,
+/*dto.SKN_NAME_K*/,
+/*dto.SKN_SUM_KBN*/,
+/*dto.SKN_SYU_KBN*/,
+/*dto.SKN_SUM_CODE*/,
+/*dto.SKN_PLN_KBN*/,
+/*dto.SKN_INP_DATE*/,
+/*dto.SKN_UPD_DATE*/,
+/*dto.SKN_PRG_ID*/,
+/*dto.SKN_USR_ID*/
+)

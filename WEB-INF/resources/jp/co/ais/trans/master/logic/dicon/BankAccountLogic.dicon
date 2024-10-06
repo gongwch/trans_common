@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="AP_CBK_MSTDao" class="jp.co.ais.trans.master.dao.AP_CBK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_CBK_MST" class="jp.co.ais.trans.master.entity.AP_CBK_MST">
+	</component>
+	
+	<component name="BNK_MSTDao" class="jp.co.ais.trans.master.dao.BNK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_CBK_MSTDao2" class="jp.co.ais.trans.master.dao.AP_CBK_MSTDao2">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="BankAccountLogic"  instance="prototype" class="jp.co.ais.trans.master.logic.impl.BankAccountLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>AP_CBK_MSTDao</arg>
+
+		<property name="entity">AP_CBK_MST</property>
+		<property name="BNK_MSTDao">BNK_MSTDao</property>
+		<property name="AP_CBK_MSTDao2">AP_CBK_MSTDao2</property>
+	</component>	
+
+</components>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-bm2.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+    <include path="jp/co/ais/trans2/bm/model/oiltype/OilTypeManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/monthlyexpense/MonthlyExpenseGetter.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/monthlyexpense/MonthlyExpenseDao.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/monthlyexpense/MonthlyExpenseManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/vesselfuel/VesselFuelGetter.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/vesselfuel/VesselFuelManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/internalprice/InternalPriceManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/stockexchanging/StockExchangingGetter.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/stockexchanging/StockExchangingManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/stockexchanging/StockExchangingSlipManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/fuelcontrol/BMFuelControlManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/bmitem/BMItemManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/oilpaymentslip/OilPaymentSlipManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/oilpaymentslip/OilPaymentSlipFactory.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/oilpaymentslip/OilPaymentSlipDao.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/settleinventory/SettleInventoryDao.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/settleinventory/SettleInventoryManager.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/fuelconsume/FuelConsumeGetter.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/fuelconsume/FuelConsumeManager.dicon" />
+
+    <include path="jp/co/ais/trans2/bm/model/fueldetaillist/FuelDetailListGetter.dicon" />
+    <include path="jp/co/ais/trans2/bm/model/fueldetaillist/FuelDetailListManager.dicon" />
+</components>

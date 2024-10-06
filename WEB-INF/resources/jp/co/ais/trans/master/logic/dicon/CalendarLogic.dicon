@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="AP_CAL_MSTDao" class="jp.co.ais.trans.master.dao.AP_CAL_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_CAL_MST" class="jp.co.ais.trans.master.entity.AP_CAL_MST">
+	</component>
+	
+	<component name="CalendarLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.CalendarLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>AP_CAL_MSTDao</arg>
+
+		<property name="entity">AP_CAL_MST</property>
+	</component>	
+
+</components>

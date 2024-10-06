@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container2.3//EN"
+"https://www.seasar.org/dtd/components23.dtd">
+
+<components>
+   <include path="dao.dicon"/>
+   <component class="jp.co.ais.trans.common.server.dao.EMP_MSTDao">
+       <aspect>dao.interceptor</aspect>
+   </component>
+</components>

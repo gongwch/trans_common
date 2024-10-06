@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+	<include path="jp/co/ais/trans/master/dao/alldao.dicon"/>
+
+	<component name="IndicationLevelDao" class="jp.co.ais.trans.common.server.dao.IndicationLevelDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="InformationLogic" instance="prototype" class="jp.co.ais.trans.common.server.di.InformationLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+	<!--  <property name="IndicationLevelDao">IndicationLevelDao</property>  -->
+		<property name="BMN_MSTDao">BMN_MSTDao</property>
+		<property name="KMK_MSTDao">KMK_MSTDao</property>
+		<property name="HKM_MSTDao">HKM_MSTDao</property>
+		<property name="UKM_MSTDao">UKM_MSTDao</property>
+	</component>
+
+</components>

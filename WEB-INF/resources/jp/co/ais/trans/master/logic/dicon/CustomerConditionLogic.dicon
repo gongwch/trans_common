@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="TRI_SJ_MSTDao" class="jp.co.ais.trans.master.dao.TRI_SJ_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="AP_HOH_MSTDao" class="jp.co.ais.trans.master.dao.AP_HOH_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="AP_CBK_MSTDao" class="jp.co.ais.trans.master.dao.AP_CBK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="BNK_MSTDao" class="jp.co.ais.trans.master.dao.BNK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="TRI_SJ_MST" class="jp.co.ais.trans.master.entity.TRI_SJ_MST">
+	</component>
+	<component name="BNK_MST" class="jp.co.ais.trans.master.entity.BNK_MST">
+	</component>
+	
+	<component name="CustomerConditionLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.CustomerConditionLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>TRI_SJ_MSTDao</arg>
+
+		<property name="entity">TRI_SJ_MST</property>
+	</component>	
+
+</components>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentManager.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentClosure.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentFbFile.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentFbDataDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentClosureCancel.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentMakeAutoSlip.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/EpPaymentMakeAutoDataDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/PaymentDataDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/PaymentControlStaffDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/TransferDataDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/payment/AcceptNoManager.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/unsettled/balance/UnsettledBalanceDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/unsettled/balance/UnsettledBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/banktransfer/EpBankTransferWrittenRequestManager.dicon" />
+    <include path="jp/co/ais/trans2/ep/model/banktransfer/EpBankTransferWrittenRequestGetter.dicon" />
+    <include path="jp/co/ais/trans2/ep/model/transfer/ApEmployeeWillTransferManager.dicon" />
+    <include path="jp/co/ais/trans2/ep/model/transfer/ApEmployeeWillTransferGetter.dicon" />
+    <include path="jp/co/ais/trans2/ep/model/individual/EpIndividualAccountRequestManager.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/individual/EpIndividualAccountRequestGetter.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/fbdata/FbDataErrorListToBookConverter.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/employee/expense/EmployeeExpenseSettleDao.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/employee/expense/EmployeeExpenseSettleManager.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/security/EpExclusiveManager.dicon" />
+    <include path="jp/co/ais/trans2/ep/model/slip/InputSettlementSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/ep/model/slip/EPSlipLogic.dicon" />
+
+</components>

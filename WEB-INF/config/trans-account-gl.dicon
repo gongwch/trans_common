@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-account-gl.dicon        * -->
+<!-- ********************************* -->
+
+<components>
+	<include path="jp/co/ais/trans/account/common/dao/SlipInputCommon.dicon" />
+	
+	<include path="jp/co/ais/trans/account/common/logic/ApDrillDownDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/ArDrillDownDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/CommonSlipInputCashFlowSeachDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/CommonSlipInputPatternSarchDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/CommonSlipInputSeachDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/GlDrillDownDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/OutputUnitLogic.dicon" />
+	<include path="jp/co/ais/trans/account/common/logic/BalanceLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/another/AnotherSystemDataReceiptLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/another/AnotherSystemDataReceiptLogic2.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/info/CashFlowsMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/info/CashFlowsSummaryMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/info/IncreaseDecreaseReasonMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/info/ItemSummaryMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/info/ItemSystemNameMasterLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/cmp/CompanyInfoLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/item/ItemInfoLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/journal/auto/BSCalculationErasingInputLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/auto/ErasingkeySettingDialogLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/auto/ForeignEvaluationSlipMakingInstructionLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/journal/close/ContentsCloseInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/close/MonthlyCloseInstructionLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/journal/journal/ApproveInputInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/journal/JournalizingSearchLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/journal/SiteApprovalInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/journal/SlipReferInstructionLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputCashFlowPatternListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputCashFlowSlipListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputReversingSlipListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputReversingSlipPatternListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputTransferSlipListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputTransferSlipPatternListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputArSlipListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputArSlipPatternListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputApSlipListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/InputApSlipPatternListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipGlLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipArLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipApLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipPatternLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipGlPatternLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipArPatternLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipApPatternLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipHistoryLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipBaseLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/OffsettingClearanceInputLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipFsLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipFacadeLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipInsertManagerLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipInsertManagerPatternLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/SlipManager.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/journal/slip/PatternManager.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/slip/SlipManager.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/report/BalanceCompareListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/BalanceTransitListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/BalanceTrialBalanceLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/BsAccountErasingPastRecordLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/CashEquivalentsBalanceLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/ConsumptionTaxAccountSheetLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/DeleteSlipListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/ForeignCurrencyRevaluationBalanceInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/ItemSeparateManagementCodeLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/JournalizingCheckListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/LedgerPanelLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/StatementOfCashFlowsInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/TaxDivisionLedgerInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/TaxDivisionTotalTableInstructionLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_EXCHANGE_BALANCE.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_BALANCE.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0240.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0280.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0290.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0330.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0340.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0400.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0410.dicon" />
+	<include path="jp/co/ais/trans/account/gl/logic/report/data/PKG_GL0090.dicon" />
+	
+	<include path="jp/co/ais/trans/account/gl/report/LedgerReportLogic.dicon" />
+
+</components>

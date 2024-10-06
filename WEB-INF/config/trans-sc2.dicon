@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+    <include path="jp/co/ais/trans2/sc/model/order/OrderManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/order/OrderDao.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/order/OrderDataConverter.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/payment/PaymentScManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/payment/PaymentScDao.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/settle/SettleScManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/settle/SettleScDao.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipbudget/ShipBudgetManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipbudget/ShipBudgetDao.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipexpenses/ShipExpensesManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/sccontrol/SCControlManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipitem/ShipItemManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipitem/ShipItemGroupManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipestimate/result/ShipEstimateResultDao.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/shipestimate/result/ShipEstimateResultManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/slip/ScSlipLogic.dicon" />
+
+    <include path="jp/co/ais/trans2/sc/model/attach/ScAttachmentManager.dicon" />
+
+    <include path="jp/co/ais/trans2/sc/model/accrualod/AccrualOdManager.dicon" />
+    <include path="jp/co/ais/trans2/sc/model/accrualod/AccrualOdDao.dicon" />
+
+</components>

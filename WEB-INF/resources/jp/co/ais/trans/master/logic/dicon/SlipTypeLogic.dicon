@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="DEN_SYU_MSTDao" class="jp.co.ais.trans.master.dao.DEN_SYU_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="DEN_SYU_MST" class="jp.co.ais.trans.master.entity.DEN_SYU_MST">
+	</component>
+	
+	<component name="SlipTypeLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.SlipTypeLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>DEN_SYU_MSTDao</arg>
+
+		<property name="entity">DEN_SYU_MST</property>
+	</component>	
+
+</components>

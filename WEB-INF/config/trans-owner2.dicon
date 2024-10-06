@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-owner.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+	<include path="jp/co/ais/trans/owner/dao/alldao.dicon" />
+	<include path="jp/co/ais/trans/owner/entity/allentity.dicon" />
+	<include path="jp/co/ais/trans/owner/logic/dicon/alllogic.dicon" />
+    <include path="jp/co/ais/trans/owner/ui/servlet/OW0060FixedAssetInformationRegistrationManager.dicon" />
+    <include path="jp/co/ais/trans/owner/model/settlementForecast/SettlementLedgerDao.dicon" />
+    <include path="jp/co/ais/trans/owner/model/shipBudget/OW0030ShipBudgetInformationRegistrationManager.dicon" />
+    <include path="jp/co/ais/trans/owner/model/upRate/OW0110ExpenseUpRateMasterManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/ow/logic/info/OwnerCurrencyLogic.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/vessel/VesselManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipbuild/ShipBuildContractInfomationManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipbuild/ShipBuildContractInfomationDao.dicon" />
+    <include path="jp/co/ais/trans2/ow/logic/shipbuild/ShipBuildContractLogic.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/slip/ShipBuildSlipManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/slip/ShipBuildSlipFactory.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shiptype/ShipTypeManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipform/ShipFormManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipcharter/CharteringContractInformationManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipcharter/CharteringContractInformationDao.dicon" />
+    
+    <include path="jp/co/ais/trans2/ow/model/fp/FinancialProjectionDao.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/fp/FinancialProjectionManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/version/VersionManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/ow/model/fpcontrol/FinancialProjectionControlManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/ow/model/sellvesselprojection/SellVesselProjectionManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/itemconversion/ItemConversionManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/projectionitem/ProjectionItemManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/simulationelements/SimulationElementsManager.dicon" />
+    
+    
+    <!--
+    <include path="jp/co/ais/trans2/ow/model/financing/FinancingPlanDao.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/financing/FinancingPlanManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipbudget/OW0030ShipBudgetInformationRegistrationManager.dicon" />
+    <include path="jp/co/ais/trans2/ow/model/shipbudget/ShipBudgetDao.dicon" />
+    -->
+
+</components>

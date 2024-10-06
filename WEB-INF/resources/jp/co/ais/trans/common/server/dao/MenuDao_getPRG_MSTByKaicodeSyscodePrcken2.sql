@@ -1,0 +1,12 @@
+SELECT
+  KAI_CODE, SYS_CODE, PRG_CODE, PRG_NAME, PRG_NAME_S, KEN, COM, LD_NAME, PARENT_PRG_CODE, MENU_KBN, DISP_INDEX
+FROM	PRG_MST/*$langPrefix*/
+WHERE
+      KAI_CODE=/*kaiCode*/'1'
+  AND SYS_CODE=/*sysCode*/'1'
+  AND (KEN >= /*prcKen*/9 OR KEN IS NULL)
+  AND (STR_DATE <= /*targetDate*/ AND END_DATE >= /*targetDate*/)
+  AND PRG_CODE != 'GL0055'
+ORDER BY
+  DISP_INDEX,
+  PRG_CODE

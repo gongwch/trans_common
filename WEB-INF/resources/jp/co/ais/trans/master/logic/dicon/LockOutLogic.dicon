@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="LOCK_OUT_TBLDao" class="jp.co.ais.trans.master.dao.LOCK_OUT_TBLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="LOCK_OUT_TBL" class="jp.co.ais.trans.master.entity.LOCK_OUT_TBL">
+	</component>
+	
+	<component name="LockOutLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.LockOutLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>LOCK_OUT_TBLDao</arg>
+
+		<property name="entity">LOCK_OUT_TBL</property>
+	</component>	
+
+</components>

@@ -1,0 +1,3003 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ <web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <mime-mapping>
+    <extension>jnlp</extension>
+    <mime-type>application/x-java-jnlp-file</mime-type>
+  </mime-mapping>
+
+
+  <session-config>
+     <session-timeout>0</session-timeout>
+  </session-config>
+
+  <listener>
+    <listener-class>jp.co.ais.trans.common.server.TSessionListener</listener-class>
+  </listener>
+  
+  <filter>
+      <filter-name>s2filter</filter-name>
+      <filter-class>org.seasar.framework.container.filter.S2ContainerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+      <filter-name>s2filter</filter-name>
+      <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>TEnvironmentServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.TEnvironmentServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>TransS2container</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.TContainerInitializeServlet</servlet-class>
+    <init-param>
+      <param-name>configPath</param-name>
+      <param-value>app.dicon</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TransS2container</servlet-name>
+    <url-pattern>/s2servlet</url-pattern>
+  </servlet-mapping>
+
+<!-- common start -->
+
+  <servlet>
+    <servlet-name>TUserInfoServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.TUserInfoServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TUserInfoServlet</servlet-name>
+    <url-pattern>/common/userInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TChangePasswordServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.TChangePasswordServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TChangePasswordServlet</servlet-name>
+    <url-pattern>/common/ChangePassword</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ProgramServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.ProgramServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProgramServlet</servlet-name>
+    <url-pattern>/common/program</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TAccountItemUnitServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.TAccountItemUnitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> 
+    <servlet-name>TAccountItemUnitServlet</servlet-name>  
+    <url-pattern>/TAccountItemUnitServlet</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TReferenceAuthorityServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.TReferenceAuthorityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> 
+    <servlet-name>TReferenceAuthorityServlet</servlet-name>  
+    <url-pattern>/TReferenceAuthorityServlet</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>InformationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.common.server.servlet.InformationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> 
+    <servlet-name>InformationServlet</servlet-name>  
+    <url-pattern>/InformationServlet</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>REFDialogMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.common.servlet.REFDialogMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> 
+    <servlet-name>REFDialogMasterServlet</servlet-name>  
+    <url-pattern>/REFDialogMasterServlet</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet> 
+    <servlet-name>CommonSlipInputPatternSarchDialogServlet</servlet-name> 
+    <servlet-class>jp.co.ais.trans.account.common.ui.servlet.CommonSlipInputPatternSarchDialogServlet</servlet-class>
+  </servlet>  
+
+  <servlet-mapping> 
+    <servlet-name>CommonSlipInputPatternSarchDialogServlet</servlet-name> 
+    <url-pattern>/CommonSlipInputPatternSarchDialogServlet</url-pattern>  
+  </servlet-mapping>
+  
+  <servlet>  
+    <servlet-name>CommonSlipInputSeachDialogServlet</servlet-name>  
+    <servlet-class>jp.co.ais.trans.account.common.ui.servlet.CommonSlipInputSeachDialogServlet</servlet-class>
+  </servlet>  
+ 
+  <servlet-mapping> 
+    <servlet-name>CommonSlipInputSeachDialogServlet</servlet-name>  
+    <url-pattern>/CommonSlipInputSeachDialogServlet</url-pattern> 
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>REFDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.common.ui.servlet.REFDialogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>REFDialogServlet</servlet-name>
+    <url-pattern>/REFDialogServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+      <servlet-name>GlDrillDownDialogServlet</servlet-name>
+      <servlet-class>jp.co.ais.trans.account.common.ui.servlet.GlDrillDownDialogServlet</servlet-class>
+    </servlet>
+  <servlet-mapping>
+      <servlet-name>GlDrillDownDialogServlet</servlet-name>
+      <url-pattern>/GlDrillDownDialogServlet</url-pattern>
+    </servlet-mapping>
+
+  <servlet> 
+      <servlet-name>CommonSlipInputCashFlowSeachDialogServlet</servlet-name>  
+      <servlet-class>jp.co.ais.trans.account.common.ui.servlet.CommonSlipInputCashFlowSeachDialogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping> 
+      <servlet-name>CommonSlipInputCashFlowSeachDialogServlet</servlet-name>  
+      <url-pattern>/CommonSlipInputCashFlowSeachDialogServlet</url-pattern> 
+    </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ApDrillDownDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.common.ui.servlet.ApDrillDownDialogServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ApDrillDownDialogServlet</servlet-name>
+    <url-pattern>/ApDrillDownDialogServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ArDrillDownDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.common.ui.servlet.ArDrillDownDialogServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ArDrillDownDialogServlet</servlet-name>
+    <url-pattern>/ArDrillDownDialogServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AR0020AccountsReceivableErasingBalanceListServlet</servlet-name>
+    <servlet-class> jp.co.ais.trans.account.common.ui.servlet.AR0020AccountsReceivableErasingBalanceListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0020AccountsReceivableErasingBalanceListServlet</servlet-name>
+    <url-pattern>/AR0020AccountsReceivableErasingBalanceListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AR0020AccountsPayableBalanceListServlet</servlet-name>
+    <servlet-class> jp.co.ais.trans.account.common.ui.servlet.AR0020AccountsPayableBalanceListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0020AccountsPayableBalanceListServlet</servlet-name>
+    <url-pattern>/AR0020AccountsPayableBalanceListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SlipInputDisplaySettingServlet</servlet-name>
+    <servlet-class> jp.co.ais.trans.account.common.ui.servlet.SlipInputDisplaySettingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SlipInputDisplaySettingServlet</servlet-name>
+    <url-pattern>/SlipInputDisplaySettingServlet</url-pattern>
+  </servlet-mapping>
+  
+<!-- common end -->
+
+<!-- account-gl start -->
+  
+  <servlet>
+    <servlet-name>GL0050ApproveInputInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0050ApproveInputInstructionServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GL0055SiteApprovalInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0055SiteApprovalInstructionServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GL0180TaxDivisionLedgerInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0180TaxDivisionLedgerInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0190TaxDivisionTotalTableInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0190TaxDivisionTotalTableInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0060ContentsUpdatelInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0060ContentsUpdatelInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0070MonthlyUpdateInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0070MonthlyUpdateInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0090CashEquivalentsBalanceServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0090CashEquivalentsBalanceServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0320AnotherSystemDataReceiptServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0320AnotherSystemDataReceiptServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0321AnotherSystemDataReceiptServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0321AnotherSystemDataReceiptServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GL0410ForeignEvaluationSlipMakingInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0410ForeignEvaluationSlipMakingInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL6010InputReversingSlipListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL6010InputReversingSlipListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL5140BsAccountErasingPastRecordServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL5140BsAccountErasingPastRecordServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL6050DeleteSlipListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL6050DeleteSlipListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0250InputCashFlowPatternListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0250InputCashFlowPatternListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0140BalanceTrialBalanceServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0140BalanceTrialBalanceServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0400StatementOfCashFlowsInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0400StatementOfCashFlowsInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0010InputCashFlowSlipListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0010InputCashFlowSlipListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0030InputTransferSlipListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0030InputTransferSlipListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0400CashFlowsMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0400CashFlowsMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0260InputReversingSlipPatternListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0260InputReversingSlipPatternListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0270InputTransferSlipPatternListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0270InputTransferSlipPatternListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0420IncreaseDecreaseReasonMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0420IncreaseDecreaseReasonMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0340BalanceTransitListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0340BalanceTransitListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL5010BSCalculationErasingInputServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL5010BSCalculationErasingInputServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL5010ErasingkeySettingDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL5010ErasingkeySettingDialogServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0070ItemSummaryMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0070ItemSummaryMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0280ItemSeparateManagementCodeServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0280ItemSeparateManagementCodeServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0065ItemSystemNameMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0065ItemSystemNameMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0350ConsumptionTaxAccountSheetServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0350ConsumptionTaxAccountSheetServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0290ForeignCurrencyRevaluationBalanceInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0290ForeignCurrencyRevaluationBalanceInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0370OffsettingClearanceInputPanelServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0370OffsettingClearanceInputPanelServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0370OffsettingClearanceInputDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0370OffsettingClearanceInputDialogServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0080JournalizingCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0080JournalizingCheckListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0110LedgerPanelServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0110LedgerPanelServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MG0410CashFlowsSummaryMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.MG0410CashFlowsSummaryMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GL0040SlipReferInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0040SlipReferInstructionServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GL0060ContentsUpdatelInstructionServlet</servlet-name>
+    <url-pattern>/GL0060ContentsUpdatelInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0070MonthlyUpdateInstructionServlet</servlet-name>
+    <url-pattern>/GL0070MonthlyUpdateInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0090CashEquivalentsBalanceServlet</servlet-name>
+    <url-pattern>/GL0090CashEquivalentsBalanceServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0320AnotherSystemDataReceiptServlet</servlet-name>
+    <url-pattern>/GL0320AnotherSystemDataReceiptServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0321AnotherSystemDataReceiptServlet</servlet-name>
+    <url-pattern>/GL0321AnotherSystemDataReceiptServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GL0410ForeignEvaluationSlipMakingInstructionServlet</servlet-name>
+    <url-pattern>/GL0410ForeignEvaluationSlipMakingInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL6010InputReversingSlipListServlet</servlet-name>
+    <url-pattern>/GL6010InputReversingSlipListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL5140BsAccountErasingPastRecordServlet</servlet-name>
+    <url-pattern>/GL5140BsAccountErasingPastRecordServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL6050DeleteSlipListServlet</servlet-name>
+    <url-pattern>/GL6050DeleteSlipListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0250InputCashFlowPatternListServlet</servlet-name>
+    <url-pattern>/MG0250InputCashFlowPatternListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0140BalanceTrialBalanceServlet</servlet-name>
+    <url-pattern>/GL0140BalanceTrialBalanceServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0400StatementOfCashFlowsInstructionServlet</servlet-name>
+    <url-pattern>/GL0400StatementOfCashFlowsInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0010InputCashFlowSlipListServlet</servlet-name>
+    <url-pattern>/GL0010InputCashFlowSlipListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0180TaxDivisionLedgerInstructionServlet</servlet-name>
+    <url-pattern>/GL0180TaxDivisionLedgerInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0190TaxDivisionTotalTableInstructionServlet</servlet-name>
+    <url-pattern>/GL0190TaxDivisionTotalTableInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0030InputTransferSlipListServlet</servlet-name>
+    <url-pattern>/GL0030InputTransferSlipListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0400CashFlowsMasterServlet</servlet-name>
+    <url-pattern>/MG0400CashFlowsMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0260InputReversingSlipPatternListServlet</servlet-name>
+    <url-pattern>/MG0260InputReversingSlipPatternListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0270InputTransferSlipPatternListServlet</servlet-name>
+    <url-pattern>/MG0270InputTransferSlipPatternListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0420IncreaseDecreaseReasonMasterServlet</servlet-name>
+    <url-pattern>/MG0420IncreaseDecreaseReasonMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0340BalanceTransitListServlet</servlet-name>
+    <url-pattern>/GL0340BalanceTransitListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL5010BSCalculationErasingInputServlet</servlet-name>
+    <url-pattern>/GL5010BSCalculationErasingInputServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GL5010ErasingkeySettingDialogServlet</servlet-name>
+    <url-pattern>/GL5010ErasingkeySettingDialogServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0070ItemSummaryMasterServlet</servlet-name>
+    <url-pattern>/MG0070ItemSummaryMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0280ItemSeparateManagementCodeServlet</servlet-name>
+    <url-pattern>/GL0280ItemSeparateManagementCodeServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0065ItemSystemNameMasterServlet</servlet-name>
+    <url-pattern>/MG0065ItemSystemNameMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  <servlet-name>GL0050ApproveInputInstructionServlet</servlet-name> 
+  <url-pattern>/GL0050ApproveInputInstructionServlet</url-pattern> 
+  </servlet-mapping>
+
+  <servlet-mapping>
+  <servlet-name>GL0055SiteApprovalInstructionServlet</servlet-name> 
+  <url-pattern>/GL0055SiteApprovalInstructionServlet</url-pattern> 
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0350ConsumptionTaxAccountSheetServlet</servlet-name>
+    <url-pattern>/GL0350ConsumptionTaxAccountSheetServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0290ForeignCurrencyRevaluationBalanceInstructionServlet</servlet-name>
+    <url-pattern>/GL0290ForeignCurrencyRevaluationBalanceInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0080JournalizingCheckListServlet</servlet-name>
+    <url-pattern>/GL0080JournalizingCheckListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GL0330BalanceCompareListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0330BalanceCompareListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GL0330BalanceCompareListServlet</servlet-name>
+    <url-pattern>/GL0330BalanceCompareListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GL0360JournalizingSearchServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.gl.ui.servlet.GL0360JournalizingSearchServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GL0360JournalizingSearchServlet</servlet-name>
+    <url-pattern>/GL0360JournalizingSearchServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0370OffsettingClearanceInputPanelServlet</servlet-name>
+    <url-pattern>/GL0370OffsettingClearanceInputPanelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GL0370OffsettingClearanceInputDialogServlet</servlet-name>
+    <url-pattern>/GL0370OffsettingClearanceInputDialogServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0110LedgerPanelServlet</servlet-name>
+    <url-pattern>/GL0110LedgerPanelServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MG0410CashFlowsSummaryMasterServlet</servlet-name>
+    <url-pattern>/MG0410CashFlowsSummaryMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GL0040SlipReferInstructionServlet</servlet-name>
+    <url-pattern>/GL0040SlipReferInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- account-gl end -->
+
+<!-- agency-hb start -->
+
+   <servlet>
+    <servlet-name>REF0000CommonSearchServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.REF0000CommonSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>REF0000CommonSearchServlet</servlet-name>
+    <url-pattern>/REF0000CommonSearchServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HB0010MotherShipEntryServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0010MotherShipEntryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HB0010MotherShipEntryServlet</servlet-name>
+    <url-pattern>/HB0010MotherShipEntryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0090OutputDataListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0090OutputDataListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HB0090OutputDataListServlet</servlet-name>
+    <url-pattern>/HB0090OutputDataListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0120OfficeMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0120OfficeMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0120OfficeMasterServlet</servlet-name>
+    <url-pattern>/HB0120OfficeMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HB0150EnteringPortPurposeServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0150EnteringPortPurposeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0150EnteringPortPurposeServlet</servlet-name>
+    <url-pattern>/HB0150EnteringPortPurposeServlet</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+    <servlet-name>HB0160BasicInfoSettingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0160BasicInfoSettingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0160BasicInfoSettingServlet</servlet-name>
+    <url-pattern>/HB0160BasicInfoSettingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0060TransactionApproveServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0060TransactionApproveServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>HB0060TransactionApproveServlet</servlet-name>
+    <url-pattern>/HB0060TransactionApproveServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0170AgencyAccountServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0170AgencyAccountServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0170AgencyAccountServlet</servlet-name>
+    <url-pattern>/HB0170AgencyAccountServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0130PortMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0130PortMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0130PortMasterServlet</servlet-name>
+    <url-pattern>/HB0130PortMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0140UsrctlMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0140UsrctlMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0140UsrctlMasterServlet</servlet-name>
+    <url-pattern>/HB0140UsrctlMasterServlet</url-pattern>
+  </servlet-mapping>    
+  
+  <servlet>
+    <servlet-name>HB0100AutoMakingListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0100AutoMakingListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HB0100AutoMakingListServlet</servlet-name>
+    <url-pattern>/HB0100AutoMakingListServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>HB0110ShipMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0110ShipMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HB0110ShipMasterServlet</servlet-name>
+    <url-pattern>/HB0110ShipMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0020AdvanceInputServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0020AdvanceInputServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0020AdvanceInputServlet</servlet-name>
+    <url-pattern>/HB0020AdvanceInputServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0040AgencyRevenueInputFragServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0040AgencyRevenueInputFragServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0040AgencyRevenueInputFragServlet</servlet-name>
+    <url-pattern>/HB0040AgencyRevenueInputFragServlet</url-pattern>
+  </servlet-mapping>   
+  
+  <servlet>
+    <servlet-name>HB0070AdjustmentOutputServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0070AdjustmentOutputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HB0070AdjustmentOutputServlet</servlet-name>
+    <url-pattern>/HB0070AdjustmentOutputServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0080ClearanceSettleServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0080ClearanceSettleServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0080ClearanceSettleServlet</servlet-name>
+    <url-pattern>/HB0080ClearanceSettleServlet</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>HB0030PaymentInputListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0030PaymentInputListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0030PaymentInputListServlet</servlet-name>
+    <url-pattern>/HB0030PaymentInputListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HB0050ExpenseTransferInputListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.agency.hb.ui.servlet.HB0050ExpenseTransferInputListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HB0050ExpenseTransferInputListServlet</servlet-name>
+    <url-pattern>/HB0050ExpenseTransferInputListServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- agency-hb end -->
+
+<!-- master start -->
+  
+  <servlet>
+    <servlet-name>MG0010EnvironmentalSettingMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0010EnvironmentalSettingMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0010EnvironmentalSettingMasterServlet</servlet-name>
+    <url-pattern>/MG0010EnvironmentalSettingMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0020UserMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0020UserMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0020UserMasterServlet</servlet-name>
+    <url-pattern>/MG0020UserMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0026UserAuthUpdateServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0026UserAuthUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0026UserAuthUpdateServlet</servlet-name>
+    <url-pattern>/MG0026UserAuthUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0027LockOutMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0027LockOutMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0027LockOutMasterServlet</servlet-name>
+    <url-pattern>/MG0027LockOutMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0028ExecutedLogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0028ExecutedLogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0028ExecutedLogServlet</servlet-name>
+    <url-pattern>/MG0028ExecutedLogServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0029ReleasedFileServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0029ReleasedFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0029ReleasedFileServlet</servlet-name>
+    <url-pattern>/MG0029ReleasedFileServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>MG0030CompanyControlMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0030CompanyControlMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0030CompanyControlMasterServlet</servlet-name>
+    <url-pattern>/MG0030CompanyControlMasterServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>MG0040GLControlMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0040GLControlMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0040GLControlMasterServlet</servlet-name>
+    <url-pattern>/MG0040GLControlMasterServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>MG0050DepartmentHierarchyMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0050DepartmentHierarchyMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0050DepartmentHierarchyMasterServlet</servlet-name>
+    <url-pattern>/MG0050DepartmentHierarchyMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0060DepartmentMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0060DepartmentMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0060DepartmentMasterServlet</servlet-name>
+    <url-pattern>/MG0060DepartmentMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0080ItemMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0080ItemMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0080ItemMasterServlet</servlet-name>
+    <url-pattern>/MG0080ItemMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0090SubItemMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0090SubItemMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0090SubItemMasterServlet</servlet-name>
+    <url-pattern>/MG0090SubItemMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0100BreakDownItemMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0100BreakDownItemMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0100BreakDownItemMasterServlet</servlet-name>
+    <url-pattern>/MG0100BreakDownItemMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0120MemoMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0120MemoMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0120MemoMasterServlet</servlet-name>
+    <url-pattern>/MG0120MemoMasterServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>MG0130ConsumptionTaxMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0130ConsumptionTaxMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0130ConsumptionTaxMasterServlet</servlet-name>
+    <url-pattern>/MG0130ConsumptionTaxMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0140BankMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0140BankMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0140BankMasterServlet</servlet-name>
+    <url-pattern>/MG0140BankMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0150CustomerMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0150CustomerMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0150CustomerMasterServlet</servlet-name>
+    <url-pattern>/MG0150CustomerMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0155CustomerConditionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0155CustomerConditionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0155CustomerConditionMasterServlet</servlet-name>
+    <url-pattern>/MG0155CustomerConditionMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0160EmployeeMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0160EmployeeMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0160EmployeeMasterServlet</servlet-name>
+    <url-pattern>/MG0160EmployeeMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0180Management1MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0180Management1MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0180Management1MasterServlet</servlet-name>
+    <url-pattern>/MG0180Management1MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0190Management2MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0190Management2MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0190Management2MasterServlet</servlet-name>
+    <url-pattern>/MG0190Management2MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0200Management3MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0200Management3MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0200Management3MasterServlet</servlet-name>
+    <url-pattern>/MG0200Management3MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0210Management4MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0210Management4MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0210Management4MasterServlet</servlet-name>
+    <url-pattern>/MG0210Management4MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0220Management5MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0220Management5MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0220Management5MasterServlet</servlet-name>
+    <url-pattern>/MG0220Management5MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0230Management6MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0230Management6MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0230Management6MasterServlet</servlet-name>
+    <url-pattern>/MG0230Management6MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0240ProgramMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0240ProgramMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0240ProgramMasterServlet</servlet-name>
+    <url-pattern>/MG0240ProgramMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0300CurrencyMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0300CurrencyMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0300CurrencyMasterServlet</servlet-name>
+    <url-pattern>/MG0300CurrencyMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0310RateMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0310RateMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0310RateMasterServlet</servlet-name>
+    <url-pattern>/MG0310RateMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0320SystemDivisionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0320SystemDivisionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0320SystemDivisionMasterServlet</servlet-name>
+    <url-pattern>/MG0320SystemDivisionMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0330SlipTypeMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0330SlipTypeMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0330SlipTypeMasterServlet</servlet-name>
+    <url-pattern>/MG0330SlipTypeMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0340IndicationLevelMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0340IndicationLevelMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0340IndicationLevelMasterServlet</servlet-name>
+    <url-pattern>/MG0340IndicationLevelMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0350InterCompanyTransferMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0350InterCompanyTransferMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0350InterCompanyTransferMasterServlet</servlet-name>
+    <url-pattern>/MG0350InterCompanyTransferMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0430AutomaticJournalizingItemMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0430AutomaticJournalizingItemMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0430AutomaticJournalizingItemMasterServlet</servlet-name>
+    <url-pattern>/MG0430AutomaticJournalizingItemMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MP0020CalendarMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MP0020CalendarMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0020CalendarMasterServlet</servlet-name>
+    <url-pattern>/MP0020CalendarMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MP0030BankAccountMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MP0030BankAccountMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0030BankAccountMasterServlet</servlet-name>
+    <url-pattern>/MP0030BankAccountMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MP0040PaymentMethodMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MP0040PaymentMethodMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0040PaymentMethodMasterServlet</servlet-name>
+    <url-pattern>/MP0040PaymentMethodMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MP0050PaymentPolicyMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MP0050PaymentPolicyMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0050PaymentPolicyMasterServlet</servlet-name>
+    <url-pattern>/MP0050PaymentPolicyMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ApMktMstServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.ApMktMstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApMktMstServlet</servlet-name>
+    <url-pattern>/ApMktMstServlet</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>KmkTkMstServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.KmkTkMstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>KmkTkMstServlet</servlet-name>
+    <url-pattern>/KmkTkMstServlet</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>LanguageMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.LanguageMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LanguageMasterServlet</servlet-name>
+    <url-pattern>/LanguageMasterServlet</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>FundMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.FundMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FundMasterServlet</servlet-name>
+    <url-pattern>/FundMasterServlet</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>REFServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.REFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>REFServlet</servlet-name>
+    <url-pattern>/REFServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0360UserUnLockServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0360UserUnLockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0360UserUnLockServlet</servlet-name>
+    <url-pattern>/MG0360UserUnLockServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MG0370SlipUnLockServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0370SlipUnLockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0370SlipUnLockServlet</servlet-name>
+    <url-pattern>/MG0370SlipUnLockServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MG0380BatchUnLockServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.MG0380BatchUnLockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MG0380BatchUnLockServlet</servlet-name>
+    <url-pattern>/MG0380BatchUnLockServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TAppropriateCompanyFieldServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.TAppropriateCompanyFieldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TAppropriateCompanyFieldServlet</servlet-name>
+    <url-pattern>/TAppropriateCompanyFieldServlet</url-pattern>
+  </servlet-mapping>  
+  
+<!-- master end -->
+
+<!-- owner start -->
+
+  <servlet>
+    <servlet-name>OW0130VesselMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0130VesselMasterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>OW0130VesselMasterServlet</servlet-name>
+    <url-pattern>/OW0130VesselMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0040DivestmentEntryServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0040DivestmentEntryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0040DivestmentEntryServlet</servlet-name>
+    <url-pattern>/OW0040DivestmentEntryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0160AssetKindMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0160AssetKindMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0160AssetKindMasterServlet</servlet-name>
+    <url-pattern>/OW0160AssetKindMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0100CharteringIncomeAutomaticOperationSortMakingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0100CharteringIncomeAutomaticOperationSortMakingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0100CharteringIncomeAutomaticOperationSortMakingServlet</servlet-name>
+    <url-pattern>/OW0100CharteringIncomeAutomaticOperationSortMakingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0010ShipbuildingContractInformationRegistrationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0010ShipbuildingContractInformationRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0010ShipbuildingContractInformationRegistrationServlet</servlet-name>
+    <url-pattern>/OW0010ShipbuildingContractInformationRegistrationServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0170JournalizingControlMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0170JournalizingControlMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0170JournalizingControlMasterServlet</servlet-name>
+    <url-pattern>/OW0170JournalizingControlMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0180ItemSettingMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0180ItemSettingMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0180ItemSettingMasterServlet</servlet-name>
+    <url-pattern>/OW0180ItemSettingMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0080SettlementForecastTableServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0080SettlementForecastTableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0080SettlementForecastTableServlet</servlet-name>
+    <url-pattern>/OW0080SettlementForecastTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0110ExpenseUpRateMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0110ExpenseUpRateMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0110ExpenseUpRateMasterServlet</servlet-name>
+    <url-pattern>/OW0110ExpenseUpRateMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0150FixedAssetPolicyMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0150FixedAssetPolicyMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0150FixedAssetPolicyMasterServlet</servlet-name>
+    <url-pattern>/OW0150FixedAssetPolicyMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0140CompanyHierarchicalMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.master.ui.servlet.OW0140CompanyHierarchicalMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0140CompanyHierarchicalMasterServlet</servlet-name>
+    <url-pattern>/OW0140CompanyHierarchicalMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0120RateManagementMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0120RateManagementMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0120RateManagementMasterServlet</servlet-name>
+    <url-pattern>/OW0120RateManagementMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CodeNameRefServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.CodeNameRefServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CodeNameRefServlet</servlet-name>
+    <url-pattern>/CodeNameRefServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>KaiCodeRefServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.KaiCodeRefServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>KaiCodeRefServlet</servlet-name>
+    <url-pattern>/KaiCodeRefServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OW0030ShipBudgetInformationRegistrationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0030ShipBudgetInformationRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0030ShipBudgetInformationRegistrationServlet</servlet-name>
+    <url-pattern>/OW0030ShipBudgetInformationRegistrationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OW0070FinancingTableServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0070FinancingTableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0070FinancingTableServlet</servlet-name>
+    <url-pattern>/OW0070FinancingTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0020CharteringContractInformationRegistrationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0020CharteringContractInformationRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0020CharteringContractInformationRegistrationServlet</servlet-name>
+    <url-pattern>/OW0020CharteringContractInformationRegistrationServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>OW0050LoansPayableMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0050LoansPayableMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0050LoansPayableMasterServlet</servlet-name>
+    <url-pattern>/OW0050LoansPayableMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0060FixedAssetInformationRegistrationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0060FixedAssetInformationRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0060FixedAssetInformationRegistrationServlet</servlet-name>
+    <url-pattern>/OW0060FixedAssetInformationRegistrationServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>OW0090ForecastResultsTransitionTableServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0090ForecastResultsTransitionTableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0090ForecastResultsTransitionTableServlet</servlet-name>
+    <url-pattern>/OW0090ForecastResultsTransitionTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0200RepaymentInterestpaymentScheduleTableListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0200RepaymentInterestpaymentScheduleTableListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0200RepaymentInterestpaymentScheduleTableListServlet</servlet-name>
+    <url-pattern>/OW0200RepaymentInterestpaymentScheduleTableListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0210MonthlyPaymentDetailServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0210MonthlyPaymentDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0210MonthlyPaymentDetailServlet</servlet-name>
+    <url-pattern>/OW0210MonthlyPaymentDetailServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OW0220LoansPayableBalanceListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.owner.ui.servlet.OW0220LoansPayableBalanceListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OW0220LoansPayableBalanceListServlet</servlet-name>
+    <url-pattern>/OW0220LoansPayableBalanceListServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- owner end -->
+
+<!-- account-ap start -->
+
+  <servlet>
+    <servlet-name>REFDialogAPServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.REFDialogAPServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>REFDialogAPServlet</servlet-name>
+    <url-pattern>/REFDialogAPServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0010AccountsPayableAppropriateSlipInputInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0010AccountsPayableAppropriateSlipInputInstructionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0010AccountsPayableAppropriateSlipInputInstructionServlet</servlet-name>
+    <url-pattern>/AP0010AccountsPayableAppropriateSlipInputInstructionServlet</url-pattern>
+  </servlet-mapping>   
+  
+  <servlet>
+    <servlet-name>MP0010AmountSettingMasterListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.MP0010AmountSettingMasterListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0010AmountSettingMasterListServlet</servlet-name>
+    <url-pattern>/MP0010AmountSettingMasterListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0230AccountsPayableBalanceListTableServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0230AccountsPayableBalanceListTableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0230AccountsPayableBalanceListTableServlet</servlet-name>
+    <url-pattern>/AP0230AccountsPayableBalanceListTableServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AP0240AccountsPayableBalanceDetailSheetServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0240AccountsPayableBalanceDetailSheetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0240AccountsPayableBalanceDetailSheetServlet</servlet-name>
+    <url-pattern>/AP0240AccountsPayableBalanceDetailSheetServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>             
+    <servlet-name>AP0220ExternalPaymentBankTransferRequestOutputInstructionServlet</servlet-name>                   
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0220ExternalPaymentBankTransferRequestOutputInstructionServlet</servlet-class>                   
+  </servlet>                    
+  <servlet-mapping>                   
+    <servlet-name>AP0220ExternalPaymentBankTransferRequestOutputInstructionServlet</servlet-name>                   
+    <url-pattern>/AP0220ExternalPaymentBankTransferRequestOutputInstructionServlet</url-pattern>                    
+  </servlet-mapping>
+
+  <servlet>             
+    <servlet-name>AP0221ExternalPaymentBankTransferRequestOutputInstructionServlet</servlet-name>                   
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0221ExternalPaymentBankTransferRequestOutputInstructionServlet</servlet-class>                   
+  </servlet>                    
+  <servlet-mapping>                   
+    <servlet-name>AP0221ExternalPaymentBankTransferRequestOutputInstructionServlet</servlet-name>                   
+    <url-pattern>/AP0221ExternalPaymentBankTransferRequestOutputInstructionServlet</url-pattern>                    
+  </servlet-mapping>
+  
+  <servlet>             
+    <servlet-name>AP0222ExtPayBankTransferReqServlet</servlet-name>                   
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0222ExtPayBankTransferReqServlet</servlet-class>                   
+  </servlet>                    
+  <servlet-mapping>                   
+    <servlet-name>AP0222ExtPayBankTransferReqServlet</servlet-name>                   
+    <url-pattern>/AP0222ExtPayBankTransferReqServlet</url-pattern>                    
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>AP0290PaymentTotalTableServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0290PaymentTotalTableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0290PaymentTotalTableServlet</servlet-name>
+    <url-pattern>/AP0290PaymentTotalTableServlet</url-pattern>
+  </servlet-mapping>    
+  
+  <servlet>
+    <servlet-name>AP0291PaymentTotalTableServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0291PaymentTotalTableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0291PaymentTotalTableServlet</servlet-name>
+    <url-pattern>/AP0291PaymentTotalTableServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0292PaymentTotalSheetServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0292PaymentTotalSheetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0292PaymentTotalSheetServlet</servlet-name>
+    <url-pattern>/AP0292PaymentTotalSheetServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>AP0280PaymentDetailSheetServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0280PaymentDetailSheetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0280PaymentDetailSheetServlet</servlet-name>
+    <url-pattern>/AP0280PaymentDetailSheetServlet</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>AP0281PaymentDetailSheetServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0281PaymentDetailSheetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0281PaymentDetailSheetServlet</servlet-name>
+    <url-pattern>/AP0281PaymentDetailSheetServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet> 
+   <servlet-name>AP0282PaymentDetailServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0282PaymentDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0282PaymentDetailServlet</servlet-name>
+    <url-pattern>/AP0282PaymentDetailServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0160ExternalPaymentAutomaticSlipMakeMainServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0160ExternalPaymentAutomaticSlipMakeMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0160ExternalPaymentAutomaticSlipMakeMainServlet</servlet-name>
+    <url-pattern>/AP0160ExternalPaymentAutomaticSlipMakeMainServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0161ExPaymentAutoSlipMakeServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0161ExPaymentAutoSlipMakeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0161ExPaymentAutoSlipMakeServlet</servlet-name>
+    <url-pattern>/AP0161ExPaymentAutoSlipMakeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0170PaymentProcessEndServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0170PaymentProcessEndServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0170PaymentProcessEndServlet</servlet-name>
+    <url-pattern>/AP0170PaymentProcessEndServlet</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+    <servlet-name>AP0171PaymentProcessEndServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0171PaymentProcessEndServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0171PaymentProcessEndServlet</servlet-name>
+    <url-pattern>/AP0171PaymentProcessEndServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0172PaymentProcessEndServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0172PaymentProcessEndServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0172PaymentProcessEndServlet</servlet-name>
+    <url-pattern>/AP0172PaymentProcessEndServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>AP0140ExternalPaymentSettleMainServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0140ExternalPaymentSettleMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0140ExternalPaymentSettleMainServlet</servlet-name>
+    <url-pattern>/AP0140ExternalPaymentSettleMainServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0410ExternalAcceptCloseCancelMainServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0410ExternalAcceptCloseCancelMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0410ExternalAcceptCloseCancelMainServlet</servlet-name>
+    <url-pattern>/AP0410ExternalAcceptCloseCancelMainServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>AP0411ExternalAcceptCloseCancelMainServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0411ExternalAcceptCloseCancelMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0411ExternalAcceptCloseCancelMainServlet</servlet-name>
+    <url-pattern>/AP0411ExternalAcceptCloseCancelMainServlet</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+    <servlet-name>AP0130ExternalAcceptCloseMainServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0130ExternalAcceptCloseMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0130ExternalAcceptCloseMainServlet</servlet-name>
+    <url-pattern>/AP0130ExternalAcceptCloseMainServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>AP0131ExtlAccCloseMainServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0131ExtlAccCloseMainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0131ExtlAccCloseMainServlet</servlet-name>
+    <url-pattern>/AP0131ExtlAccCloseMainServlet</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+    <servlet-name>AP0260PaymentCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0260PaymentCheckListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0260PaymentCheckListServlet</servlet-name>
+    <url-pattern>/AP0260PaymentCheckListServlet</url-pattern>
+  </servlet-mapping>  
+
+ <servlet>
+    <servlet-name>AP0261PaymentCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0261PaymentCheckListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0261PaymentCheckListServlet</servlet-name>
+    <url-pattern>/AP0261PaymentCheckListServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>AP0262PaymentCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0262PaymentCheckListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0262PaymentCheckListServlet</servlet-name>
+    <url-pattern>/AP0262PaymentCheckListServlet</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+    <servlet-name>MP0090RemittancePurposeMasterListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.MP0090RemittancePurposeMasterListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0090RemittancePurposeMasterListServlet</servlet-name>
+    <url-pattern>/MP0090RemittancePurposeMasterListServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0400EmployeePayAcceptCancelServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0400EmployeePayAcceptCancelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0400EmployeePayAcceptCancelServlet</servlet-name>
+    <url-pattern>/AP0400EmployeePayAcceptCancelServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0430AbroadRemittanceRequestServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0430AbroadRemittanceRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0430AbroadRemittanceRequestServlet</servlet-name>
+    <url-pattern>/AP0430AbroadRemittanceRequestServlet</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>AP0431AbroadRemittanceRequestServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0431AbroadRemittanceRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0431AbroadRemittanceRequestServlet</servlet-name>
+    <url-pattern>/AP0431AbroadRemittanceRequestServlet</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>AP0432AbroadRemittanceReqServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0432AbroadRemittanceReqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0432AbroadRemittanceReqServlet</servlet-name>
+    <url-pattern>/AP0432AbroadRemittanceReqServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0450AbroadRemittanceRequestDataMakingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0450AbroadRemittanceRequestDataMakingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0450AbroadRemittanceRequestDataMakingServlet</servlet-name>
+    <url-pattern>/AP0450AbroadRemittanceRequestDataMakingServlet</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+    <servlet-name>AP0440AbroadRemittanceAdjustmentCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0440AbroadRemittanceAdjustmentCheckListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0440AbroadRemittanceAdjustmentCheckListServlet</servlet-name>
+    <url-pattern>/AP0440AbroadRemittanceAdjustmentCheckListServlet</url-pattern>
+  </servlet-mapping>  
+  
+   <servlet>
+    <servlet-name>AP0441AbroadRemittanceAdjustmentCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0441AbroadRemittanceAdjustmentCheckListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0441AbroadRemittanceAdjustmentCheckListServlet</servlet-name>
+    <url-pattern>/AP0441AbroadRemittanceAdjustmentCheckListServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0442AbroadRemittanceAdjustServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0442AbroadRemittanceAdjustServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0442AbroadRemittanceAdjustServlet</servlet-name>
+    <url-pattern>/AP0442AbroadRemittanceAdjustServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0420AbroadRemittanceAdjustmentInputServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0420AbroadRemittanceAdjustmentInputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0420AbroadRemittanceAdjustmentInputServlet</servlet-name>
+    <url-pattern>/AP0420AbroadRemittanceAdjustmentInputServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0421ForeignAdjustmentInputServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0421ForeignAdjustmentInputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0421ForeignAdjustmentInputServlet</servlet-name>
+    <url-pattern>/AP0421ForeignAdjustmentInputServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MP0060AccountsPayableAppropriatePatternInputInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.MP0060AccountsPayableAppropriatePatternInputInstructionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MP0060AccountsPayableAppropriatePatternInputInstructionServlet</servlet-name>
+    <url-pattern>/MP0060AccountsPayableAppropriatePatternInputInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AP0150ExternalPaymentFBDataServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0150ExternalPaymentFBDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0150ExternalPaymentFBDataServlet</servlet-name>
+    <url-pattern>/AP0150ExternalPaymentFBDataServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0151ExternalPaymentFBDataServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0151ExternalPaymentFBDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0151ExternalPaymentFBDataServlet</servlet-name>
+    <url-pattern>/AP0151ExternalPaymentFBDataServlet</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>AP0152ExternalPayFBDataMakeServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0152ExternalPayFBDataMakeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0152ExternalPayFBDataMakeServlet</servlet-name>
+    <url-pattern>/AP0152ExternalPayFBDataMakeServlet</url-pattern>
+  </servlet-mapping>  
+  
+    
+  <servlet>
+    <servlet-name>AP0080PaymentMethodModifyReservationInputServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0080PaymentMethodModifyReservationInputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0080PaymentMethodModifyReservationInputServlet</servlet-name>
+    <url-pattern>/AP0080PaymentMethodModifyReservationInputServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>AP0090EmployeePaymentMethodServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0090EmployeePaymentMethodServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0090EmployeePaymentMethodServlet</servlet-name>
+    <url-pattern>/AP0090EmployeePaymentMethodServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>AP0200IndividualAccountTrsferServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0200IndividualAccountTrsferServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0200IndividualAccountTrsferServlet</servlet-name>
+    <url-pattern>/AP0200IndividualAccountTrsferServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+   
+    <servlet-name>CommonSlipInputListServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.CommonSlipInputListServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>CommonSlipInputListServlet</servlet-name>
+    <url-pattern>/CommonSlipInputListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PaymentControlTableServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.common.server.servlet.PaymentControlTableServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>PaymentControlTableServlet</servlet-name>
+    <url-pattern>/PaymentControlTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>TSlipDetailUnitServlet</servlet-name>
+  	<servlet-class>jp.co.ais.trans.account.common.server.servlet.TSlipDetailUnitServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>TSlipDetailUnitServlet</servlet-name>
+    <url-pattern>/TSlipDetailUnitServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AP0020TemporaryPaymentInputServlet</servlet-name>
+  	<servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0020TemporaryPaymentInputServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0020TemporaryPaymentInputServlet</servlet-name>
+    <url-pattern>/AP0020TemporaryPaymentInputServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0100EmployeePaymentAcceptCloseServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0100EmployeePaymentAcceptCloseServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0100EmployeePaymentAcceptCloseServlet</servlet-name>
+    <url-pattern>/AP0100EmployeePaymentAcceptCloseServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP5020TemPayUnsBalanceListTableServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP5020TemPayUnsBalanceListTableServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP5020TemPayUnsBalanceListTableServlet</servlet-name>
+    <url-pattern>/AP5020TemPayUnsBalanceListTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP5030EmployeeExpSettleListTableServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP5030EmployeeExpSettleListTableServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP5030EmployeeExpSettleListTableServlet</servlet-name>
+    <url-pattern>/AP5030EmployeeExpSettleListTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TEnhanceTableServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.common.server.servlet.TEnhanceTableServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>TEnhanceTableServlet</servlet-name>
+    <url-pattern>/TEnhanceTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TSlipDetailTableServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.common.server.servlet.TSlipDetailTableServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>TSlipDetailTableServlet</servlet-name>
+    <url-pattern>/TSlipDetailTableServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0110FBDataMakeServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0110FBDataMakeServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0110FBDataMakeServlet</servlet-name>
+    <url-pattern>/AP0110FBDataMakeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AP0120EmployeePayAutoSlipMakeServlet</servlet-name>
+  <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0120EmployeePayAutoSlipMakeServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0120EmployeePayAutoSlipMakeServlet</servlet-name>
+    <url-pattern>/AP0120EmployeePayAutoSlipMakeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>TSlipDeptItemUnitServlet</servlet-name>
+   <servlet-class>jp.co.ais.trans.account.common.server.servlet.TSlipDeptItemUnitServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>TSlipDeptItemUnitServlet</servlet-name>
+    <url-pattern>/TSlipDeptItemUnitServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>AP0030ExpenseSettlementInputServlet</servlet-name>
+   <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0030ExpenseSettlementInputServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>AP0030ExpenseSettlementInputServlet</servlet-name>
+    <url-pattern>/AP0030ExpenseSettlementInputServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>MP0070ExpenseSettlementPatternServlet</servlet-name>
+   <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.MP0070ExpenseSettlementPatternServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>MP0070ExpenseSettlementPatternServlet</servlet-name>
+    <url-pattern>/MP0070ExpenseSettlementPatternServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>TemporaryPaySlipListServlet</servlet-name>
+   <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.TemporaryPaySlipListServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>TemporaryPaySlipListServlet</servlet-name>
+    <url-pattern>/TemporaryPaySlipListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>CommonApSlipInputPatternListServlet</servlet-name>
+   <servlet-class>jp.co.ais.trans.account.common.ui.servlet.CommonApSlipInputPatternListServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>CommonApSlipInputPatternListServlet</servlet-name>
+    <url-pattern>/CommonApSlipInputPatternListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>ApSlipInputSearchServlet</servlet-name>
+   <servlet-class>jp.co.ais.trans.account.common.ui.servlet.ApSlipInputSearchServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>ApSlipInputSearchServlet</servlet-name>
+    <url-pattern>/ApSlipInputSearchServlet</url-pattern>
+  </servlet-mapping>
+  
+<!-- account-ap end -->
+ 
+<!-- account-ar start -->
+
+  <servlet>
+    <servlet-name>ARRefDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.ARRefDialogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ARRefDialogServlet</servlet-name>
+    <url-pattern>/ARRefDialogServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0010AccountsReceivableAppropriateServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0010AccountsReceivableAppropriateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0010AccountsReceivableAppropriateServlet</servlet-name>
+    <url-pattern>/AR0010AccountsReceivableAppropriateServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MR0010AccountsReceivableAppropriateSlipPatternInputInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.MR0010AccountsReceivableAppropriateSlipPatternInputInstructionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MR0010AccountsReceivableAppropriateSlipPatternInputInstructionServlet</servlet-name>
+    <url-pattern>/MR0010AccountsReceivableAppropriateSlipPatternInputInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AR0020AccountsReceivableErasingInputListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0020AccountsReceivableErasingInputListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0020AccountsReceivableErasingInputListServlet</servlet-name>
+    <url-pattern>/AR0020AccountsReceivableErasingInputListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AR0020AccountsReceivableErasingInputEditDialogServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0020AccountsReceivableErasingInputEditDialogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0020AccountsReceivableErasingInputEditDialogServlet</servlet-name>
+    <url-pattern>/AR0020AccountsReceivableErasingInputEditDialogServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0030AccountsReceivableListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0030AccountsReceivableListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0030AccountsReceivableListServlet</servlet-name>
+    <url-pattern>/AR0030AccountsReceivableListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0040AccountsReceivableDtlServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0040AccountsReceivableDtlServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0040AccountsReceivableDtlServlet</servlet-name>
+    <url-pattern>/AR0040AccountsReceivableDtlServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0060MensalCashInDueTotalServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0060MensalCashInDueTotalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0060MensalCashInDueTotalServlet</servlet-name>
+    <url-pattern>/AR0060MensalCashInDueTotalServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0070CashInDataUptakeServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0070CashInDataUptakeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0070CashInDataUptakeServlet</servlet-name>
+    <url-pattern>/AR0070CashInDataUptakeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0080CashInDataExceptionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0080CashInDataExceptionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0080CashInDataExceptionServlet</servlet-name>
+    <url-pattern>/AR0080CashInDataExceptionServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0090CashInDetailListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0090CashInDetailListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0090CashInDetailListServlet</servlet-name>
+    <url-pattern>/AR0090CashInDetailListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0100AutomaticErasingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0100AutomaticErasingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0100AutomaticErasingServlet</servlet-name>
+    <url-pattern>/AR0100AutomaticErasingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0110ErasingResultListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0110ErasingResultListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0110ErasingResultListServlet</servlet-name>
+    <url-pattern>/AR0110ErasingResultListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AR0120CashInAutoSlipMakeServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.AR0120CashInAutoSlipMakeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AR0120CashInAutoSlipMakeServlet</servlet-name>
+    <url-pattern>/AR0120CashInAutoSlipMakeServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MR0020RequestDivisionMstServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.MR0020RequestDivisionMstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MR0020RequestDivisionMstServlet</servlet-name>
+    <url-pattern>/MR0020RequestDivisionMstServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MR0030CashInPolicyMstServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.MR0030CashInPolicyMstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MR0030CashInPolicyMstServlet</servlet-name>
+    <url-pattern>/MR0030CashInPolicyMstServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ARCodeRefServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ar.ui.servlet.ARCodeRefServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ARCodeRefServlet</servlet-name>
+    <url-pattern>/ARCodeRefServlet</url-pattern>
+  </servlet-mapping>
+  
+<!-- account-ar end -->
+  
+<!-- account-pc start -->
+    
+  <servlet>
+    <servlet-name>MPC0200ConsolidatedCashFlowSummaryMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0200ConsolidatedCashFlowSummaryMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0200ConsolidatedCashFlowSummaryMasterServlet</servlet-name>
+    <url-pattern>/MPC0200ConsolidatedCashFlowSummaryMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>MPC0010ConsolidatedCompanyPolicyMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0010ConsolidatedCompanyPolicyMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0010ConsolidatedCompanyPolicyMasterServlet</servlet-name>
+    <url-pattern>/MPC0010ConsolidatedCompanyPolicyMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0070ConsolidatedItemConversionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0070ConsolidatedItemConversionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0070ConsolidatedItemConversionMasterServlet</servlet-name>
+    <url-pattern>/MPC0070ConsolidatedItemConversionMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0130SegmentConversionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0130SegmentConversionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0130SegmentConversionMasterServlet</servlet-name>
+    <url-pattern>/MPC0130SegmentConversionMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0140ConsolidatedIncreaseDecreaseReasonMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0140ConsolidatedIncreaseDecreaseReasonMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0140ConsolidatedIncreaseDecreaseReasonMasterServlet</servlet-name>
+    <url-pattern>/MPC0140ConsolidatedIncreaseDecreaseReasonMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0150ConsolidatedIncreaseDecreaseReasonConversionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0150ConsolidatedIncreaseDecreaseReasonConversionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0150ConsolidatedIncreaseDecreaseReasonConversionMasterServlet</servlet-name>
+    <url-pattern>/MPC0150ConsolidatedIncreaseDecreaseReasonConversionMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0150OutLineServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0150OutLineServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0150OutLineServlet</servlet-name>
+    <url-pattern>/MPC0150OutLineServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0060ConsolidatedItemSystemNameMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0060ConsolidatedItemSystemNameMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0060ConsolidatedItemSystemNameMasterServlet</servlet-name>
+    <url-pattern>/MPC0060ConsolidatedItemSystemNameMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0160GroupCompanyMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0160GroupCompanyMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0160GroupCompanyMasterServlet</servlet-name>
+    <url-pattern>/MPC0160GroupCompanyMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0190ConsolidatedCashFlowMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0190ConsolidatedCashFlowMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0190ConsolidatedCashFlowMasterServlet</servlet-name>
+    <url-pattern>/MPC0190ConsolidatedCashFlowMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0050ConsolidatedItemSummaryMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0050ConsolidatedItemSummaryMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0050ConsolidatedItemSummaryMasterServlet</servlet-name>
+    <url-pattern>/MPC0050ConsolidatedItemSummaryMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0020ConsolidatedItemMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0020ConsolidatedItemMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0020ConsolidatedItemMasterServlet</servlet-name>
+    <url-pattern>/MPC0020ConsolidatedItemMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0030ConsolidatedSubMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0030ConsolidatedSubMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0030ConsolidatedSubMasterServlet</servlet-name>
+    <url-pattern>/MPC0030ConsolidatedSubMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0040ConsolidatedBreakDownMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0040ConsolidatedBreakDownMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0040ConsolidatedBreakDownMasterServlet</servlet-name>
+    <url-pattern>/MPC0040ConsolidatedBreakDownMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>MPC0080ConsolidatedCustomerMasterServlet</servlet-name>
+      <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0080ConsolidatedCustomerMasterServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+      <servlet-name>MPC0080ConsolidatedCustomerMasterServlet</servlet-name>
+      <url-pattern>/MPC0080ConsolidatedCustomerMasterServlet</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0090ConsolidatedCustomerConversionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0090ConsolidatedCustomerConversionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0090ConsolidatedCustomerConversionMasterServlet</servlet-name>
+    <url-pattern>/MPC0090ConsolidatedCustomerConversionMasterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+  <servlet-name>MPC0100SegmentDivision1MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0100SegmentDivision1MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MPC0100SegmentDivision1MasterServlet</servlet-name>
+    <url-pattern>/MPC0100SegmentDivision1MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0110SegmentDivision2MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0110SegmentDivision2MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0110SegmentDivision2MasterServlet</servlet-name>
+    <url-pattern>/MPC0110SegmentDivision2MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0120SegmentDivision3MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0120SegmentDivision3MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0120SegmentDivision3MasterServlet</servlet-name>
+    <url-pattern>/MPC0120SegmentDivision3MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MPC0180ConsolidatedAdjustmentJournalizingDivisionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.MPC0180ConsolidatedAdjustmentJournalizingDivisionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MPC0180ConsolidatedAdjustmentJournalizingDivisionMasterServlet</servlet-name>
+    <url-pattern>/MPC0180ConsolidatedAdjustmentJournalizingDivisionMasterServlet</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>PC0060SegmentInfoServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0060SegmentInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0060SegmentInfoServlet</servlet-name>
+    <url-pattern>/PC0060SegmentInfoServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0060SegmentDivision1MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0060SegmentDivision1MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0060SegmentDivision1MasterServlet</servlet-name>
+    <url-pattern>/PC0060SegmentDivision1MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0060SegmentDivision2MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0060SegmentDivision2MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0060SegmentDivision2MasterServlet</servlet-name>
+    <url-pattern>/PC0060SegmentDivision2MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0060SegmentDivision3MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0060SegmentDivision3MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0060SegmentDivision3MasterServlet</servlet-name>
+    <url-pattern>/PC0060SegmentDivision3MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>PC0060TriMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0060TriMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0060TriMasterServlet</servlet-name>
+    <url-pattern>/PC0060TriMasterServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>PC0080JournalizingCheckListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0080JournalizingCheckListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0080JournalizingCheckListServlet</servlet-name>
+    <url-pattern>/PC0080JournalizingCheckListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0010ConsolidatedTrialBalanceOutputInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0010ConsolidatedTrialBalanceOutputInstructionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0010ConsolidatedTrialBalanceOutputInstructionServlet</servlet-name>
+    <url-pattern>/PC0010ConsolidatedTrialBalanceOutputInstructionServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0300AnotherSystemDataReceiptServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0300AnotherSystemDataReceiptServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0300AnotherSystemDataReceiptServlet</servlet-name>
+    <url-pattern>/PC0300AnotherSystemDataReceiptServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0050ConsolidatedStatementOfCashFlowsOutputInstructionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0050ConsolidatedStatementOfCashFlowsOutputInstructionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0050ConsolidatedStatementOfCashFlowsOutputInstructionServlet</servlet-name>
+    <url-pattern>/PC0050ConsolidatedStatementOfCashFlowsOutputInstructionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PC0040ConsolidatedWorksheetInputFragServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0040ConsolidatedWorksheetInputFragServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0040ConsolidatedWorksheetInputFragServlet</servlet-name>
+    <url-pattern>/PC0040ConsolidatedWorksheetInputFragServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PC0070AutomaticErasingInputFragServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.ui.servlet.PC0070AutomaticErasingInputFragServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PC0070AutomaticErasingInputFragServlet</servlet-name>
+    <url-pattern>/PC0070AutomaticErasingInputFragServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PCInformationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.pc.common.ui.servlet.PCInformationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PCInformationServlet</servlet-name>
+    <url-pattern>/PCInformationServlet</url-pattern>
+  </servlet-mapping>
+  
+<!-- account-pc end -->
+
+<!-- account-lm start -->
+
+  <servlet>
+    <servlet-name>REFDialogLMServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.REFDialogLMServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>REFDialogLMServlet</servlet-name>
+    <url-pattern>/REFDialogLMServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ML0010BorrowedMoneyBasicsSetMstServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.ML0010BorrowedMoneyBasicsSetMstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ML0010BorrowedMoneyBasicsSetMstServlet</servlet-name>
+    <url-pattern>/ML0010BorrowedMoneyBasicsSetMstServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ML0020PurposeMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.ML0020PurposeMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ML0020PurposeMasterServlet</servlet-name>
+    <url-pattern>/ML0020PurposeMasterServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>LM0010LoanPayableRegServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0010LoanPayableRegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0010LoanPayableRegServlet</servlet-name>
+    <url-pattern>/LM0010LoanPayableRegServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0020BorrowedMoneyProcessingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0020BorrowedMoneyProcessingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0020BorrowedMoneyProcessingServlet</servlet-name>
+    <url-pattern>/LM0020BorrowedMoneyProcessingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0030ReturnProcessingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0030ReturnProcessingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0030ReturnProcessingServlet</servlet-name>
+    <url-pattern>/LM0030ReturnProcessingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0040SettlingProcessingServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0040SettlingProcessingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0040SettlingProcessingServlet</servlet-name>
+    <url-pattern>/LM0040SettlingProcessingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0040SettlingProcessingServlet2</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0040SettlingProcessingServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0040SettlingProcessingServlet2</servlet-name>
+    <url-pattern>/LM0040SettlingProcessingServlet2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0050RIPaymentScheduleServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0050RIPaymentScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0050RIPaymentScheduleServlet</servlet-name>
+    <url-pattern>/LM0050RIPaymentScheduleServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0060RIPaymentChangeListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0060RIPaymentChangeListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>LM0060RIPaymentChangeListServlet</servlet-name>
+     <url-pattern>/LM0060RIPaymentChangeListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0070PIBreakDownListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0070PIBreakDownListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>LM0070PIBreakDownListServlet</servlet-name>
+     <url-pattern>/LM0070PIBreakDownListServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LM0080LongShortTransFerListServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.lm.ui.servlet.LM0080LongShortTransFerListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LM0080LongShortTransFerListServlet</servlet-name>
+    <url-pattern>/LM0080LongShortTransFerListServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- account-lm end -->
+
+<!-- account-bg start -->
+
+    <servlet>
+      <servlet-name>MB0010BudgetTypeMasterServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.MB0010BudgetTypeMasterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>MB0010BudgetTypeMasterServlet</servlet-name>
+      <url-pattern>/MB0010BudgetTypeMasterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>BG0010ExcelUptakeServlet</servlet-name>
+      <servlet-class>jp.co.ais.trans.account.bg.ui.servlet.BG0010ExcelUptakeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0010ExcelUptakeServlet</servlet-name>
+      <url-pattern>/BG0010ExcelUptakeServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>BG0020ExcelOutputServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.BG0020ExcelOutputServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0020ExcelOutputServlet</servlet-name>
+      <url-pattern>/BG0020ExcelOutputServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>BG0030CompilationOfBudgetInputServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.BG0030CompilationOfBudgetInputServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0030CompilationOfBudgetInputServlet</servlet-name>
+      <url-pattern>/BG0030CompilationOfBudgetInputServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>BG0040BudgetDecisionInputServlet</servlet-name>
+      <servlet-class>jp.co.ais.trans.account.bg.ui.servlet.BG0040BudgetDecisionInputServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0040BudgetDecisionInputServlet</servlet-name>
+      <url-pattern>/BG0040BudgetDecisionInputServlet</url-pattern>
+    </servlet-mapping>
+   
+   <servlet>
+      <servlet-name>BG0110BudgetCountListServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.BG0110BudgetCountListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0110BudgetCountListServlet</servlet-name>
+      <url-pattern>/BG0110BudgetCountListServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>BG0120SectionBudgetCmpServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.BG0120SectionBudgetCmpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0120SectionBudgetCmpServlet</servlet-name>
+      <url-pattern>/BG0120SectionBudgetCmpServlet</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+      <servlet-name>BG0130BudgetResultCmpListServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.BG0130BudgetResultCmpListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>BG0130BudgetResultCmpListServlet</servlet-name>
+      <url-pattern>/BG0130BudgetResultCmpListServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>REFDialogBGServlet</servlet-name>
+      <servlet-class>
+        jp.co.ais.trans.account.bg.ui.servlet.REFDialogBGServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>REFDialogBGServlet</servlet-name>
+      <url-pattern>/REFDialogBGServlet</url-pattern>
+    </servlet-mapping>
+
+<!-- account-bg end -->
+
+<!-- account-fa start -->
+
+  <servlet>
+    <servlet-name>FaBookComboBoxServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.common.servlet.FaBookComboBoxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FaBookComboBoxServlet</servlet-name>
+    <url-pattern>/FaBookComboBoxServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FaAssetNoSearchServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.common.servlet.FaAssetNoSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FaAssetNoSearchServlet</servlet-name>
+    <url-pattern>/FaAssetNoSearchServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FaConfigServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.common.servlet.FaConfigServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FaConfigServlet</servlet-name>
+    <url-pattern>/FaConfigServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0010FaControllMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0010FaControllMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0010FaControllMasterServlet</servlet-name>
+    <url-pattern>/MF0010FaControllMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0020AssetKindMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0020AssetKindMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0020AssetKindMasterServlet</servlet-name>
+    <url-pattern>/MF0020AssetKindMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0030FaConstructionMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0030FaConstructionMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0030FaConstructionMasterServlet</servlet-name>
+    <url-pattern>/MF0030FaConstructionMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0040FaDetailMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0040FaDetailMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0040FaDetailMasterServlet</servlet-name>
+    <url-pattern>/MF0040FaDetailMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0050AssetGroupMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0050AssetGroupMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0050AssetGroupMasterServlet</servlet-name>
+    <url-pattern>/MF0050AssetGroupMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0060CityVillageMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0060CityVillageMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0060CityVillageMasterServlet</servlet-name>
+    <url-pattern>/MF0060CityVillageMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0070FaDeclareMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0070FaDeclareMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0070FaDeclareMasterServlet</servlet-name>
+    <url-pattern>/MF0070FaDeclareMasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MF0080Management1MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0080Management1MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0080Management1MasterServlet</servlet-name>
+    <url-pattern>/MF0080Management1MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MF0090Management2MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0090Management2MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0090Management2MasterServlet</servlet-name>
+    <url-pattern>/MF0090Management2MasterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MF0100Management3MasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.MF0100Management3MasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0100Management3MasterServlet</servlet-name>
+    <url-pattern>/MF0100Management3MasterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0010AcquisitionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0010AcquisitionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0010AcquisitionServlet</servlet-name>
+    <url-pattern>/FA0010AcquisitionServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0020RemoveSellServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0020RemoveSellServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0020RemoveSellServlet</servlet-name>
+    <url-pattern>/FA0020RemoveSellServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0030MoveServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0030MoveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0030MoveServlet</servlet-name>
+    <url-pattern>/FA0030MoveServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0040OtherProcessServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0040OtherProcessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0040OtherProcessServlet</servlet-name>
+    <url-pattern>/FA0040OtherProcessServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0050AssetImportServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0050AssetImportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0050AssetImportServlet</servlet-name>
+    <url-pattern>/FA0050AssetImportServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0060ImpairmentServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0060ImpairmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0060ImpairmentServlet</servlet-name>
+    <url-pattern>/FA0060ImpairmentServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0070AutoSlipIssueServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0070AutoSlipIssueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0070AutoSlipIssueServlet</servlet-name>
+    <url-pattern>/FA0070AutoSlipIssueServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0080MontlyCloseServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0080MontlyCloseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0080MontlyCloseServlet</servlet-name>
+    <url-pattern>/FA0080MontlyCloseServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0100LedgerServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0100LedgerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0100LedgerServlet</servlet-name>
+    <url-pattern>/FA0100LedgerServlet</url-pattern>
+  </servlet-mapping> 
+
+  <servlet>
+    <servlet-name>FA0110DepreciationStatementServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0110DepreciationStatementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0110DepreciationStatementServlet</servlet-name>
+    <url-pattern>/FA0110DepreciationStatementServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>FA0120DepreciationScheduleServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0120DepreciationScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0120DepreciationScheduleServlet</servlet-name>
+    <url-pattern>/FA0120DepreciationScheduleServlet</url-pattern>
+  </servlet-mapping> 
+
+  <servlet>
+    <servlet-name>FA0130AnnualDepreciationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0130AnnualDepreciationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0130AnnualDepreciationServlet</servlet-name>
+    <url-pattern>/FA0130AnnualDepreciationServlet</url-pattern>
+  </servlet-mapping> 
+
+  <servlet>
+    <servlet-name>FA0140DeprAssetDeclarationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.fa.ui.servlet.FA0140DeprAssetDeclarationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0140DeprAssetDeclarationServlet</servlet-name>
+    <url-pattern>/FA0140DeprAssetDeclarationServlet</url-pattern>
+  </servlet-mapping> 
+    
+  <servlet>
+    <servlet-name>AP0081PaymentMethodModifyServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans.account.ap.ui.servlet.AP0081PaymentMethodModifyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AP0081PaymentMethodModifyServlet</servlet-name>
+    <url-pattern>/AP0081PaymentMethodModifyServlet</url-pattern>
+  </servlet-mapping>
+
+<!-- account-fa end -->
+
+<!-- trans2.0 start -->
+
+  <servlet>
+    <servlet-name>TLoginServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.common.ui.TLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TLoginServlet</servlet-name>
+    <url-pattern>/TLoginServlet</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+    <servlet-name>TServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.common.server.TServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TServlet</servlet-name>
+    <url-pattern>/TServlet</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+    <servlet-name>TDownloadServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.common.server.TDownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TDownloadServlet</servlet-name>
+    <url-pattern>/TDownloadServlet</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+    <servlet-name>TJarCheckServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.common.server.TJarCheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TJarCheckServlet</servlet-name>
+    <url-pattern>/TJarCheckServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TAppletServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.common.ui.TAppletServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TAppletServlet</servlet-name>
+    <url-pattern>/TAppletServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Fa2AssetNoSearchServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.common.servlet.Fa2AssetNoSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Fa2AssetNoSearchServlet</servlet-name>
+    <url-pattern>/Fa2AssetNoSearchServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0011AcquisitionServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0011AcquisitionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0011AcquisitionServlet</servlet-name>
+    <url-pattern>/FA0011AcquisitionServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0021RemoveSellServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0021RemoveSellServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0021RemoveSellServlet</servlet-name>
+    <url-pattern>/FA0021RemoveSellServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0031MoveServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0031MoveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0031MoveServlet</servlet-name>
+    <url-pattern>/FA0031MoveServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0061ImpairmentServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0061ImpairmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0061ImpairmentServlet</servlet-name>
+    <url-pattern>/FA0061ImpairmentServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0071AutoSlipIssueServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0071AutoSlipIssueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0071AutoSlipIssueServlet</servlet-name>
+    <url-pattern>/FA0071AutoSlipIssueServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FA0091RetirementObligationServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0091RetirementObligationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0091RetirementObligationServlet</servlet-name>
+    <url-pattern>/FA0091RetirementObligationServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FA0150ScheduleLedgerServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0150ScheduleLedgerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0150ScheduleLedgerServlet</servlet-name>
+    <url-pattern>/FA0150ScheduleLedgerServlet</url-pattern>
+  </servlet-mapping> 
+
+  <servlet>
+    <servlet-name>FA0160AssyukuScheduleLedgerServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.FA0160AssyukuScheduleLedgerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FA0160AssyukuScheduleLedgerServlet</servlet-name>
+    <url-pattern>/FA0160AssyukuScheduleLedgerServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>MF0021AssetKindMasterServlet</servlet-name>
+    <servlet-class>jp.co.ais.trans2.account.fa.ui.servlet.MF0021AssetKindMasterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MF0021AssetKindMasterServlet</servlet-name>
+    <url-pattern>/MF0021AssetKindMasterServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>

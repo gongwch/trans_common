@@ -1,0 +1,31 @@
+INSERT INTO CUR_MST(
+KAI_CODE,
+CUR_CODE,
+CUR_NAME,
+CUR_NAME_S,
+CUR_NAME_K,
+DEC_KETA,
+RATE_POW,
+CONV_KBN,
+STR_DATE,
+END_DATE,
+INP_DATE,
+UPD_DATE,
+PRG_ID,
+USR_ID
+) VALUES (
+/*dto.KAI_CODE*/,
+/*dto.CUR_CODE*/,
+/*dto.CUR_NAME*/,
+/*dto.CUR_NAME_S*/,
+/*dto.CUR_NAME_K*/,
+/*dto.DEC_KETA*/,
+/*dto.RATE_POW*/,
+/*dto.CONV_KBN*/,
+/*dto.STR_DATE*/,
+/*dto.END_DATE*/,
+/*dto.INP_DATE*/,
+/*dto.UPD_DATE*/,
+/*dto.PRG_ID*/,
+/*dto.USR_ID*/
+)

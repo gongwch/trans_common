@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="TRI_MSTDao" class="jp.co.ais.trans.master.dao.TRI_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="TRI_MST" class="jp.co.ais.trans.master.entity.TRI_MST">
+	</component>
+	
+	<component name="CustomerLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.CustomerLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>TRI_MSTDao</arg>
+
+		<property name="entity">TRI_MST</property>
+	</component>	
+
+</components>

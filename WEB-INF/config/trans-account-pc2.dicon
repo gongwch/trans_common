@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>
+	<include path="jp/co/ais/trans2/pc/model/journalizingcheck/JournalizingCheckGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journalizingcheck/JournalizingCheckManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journal/WorksheetManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journal/WorkSheetCompareManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journal/WorkSheetCompareGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journal/AutoEraseManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journal/AutoJournalItemManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/journal/AutoJournalItemDao.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/othersystem/OtherSystemDataServiceManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/othersystem/CsvImporter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/othersystem/BalanceImporter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/othersystem/IFDetailImporter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/balance/BalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/balance/BalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/customer/PcCustomerManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/item/PcItemManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/item/PcItemOrganizationManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/bs/PcBalanceSheetManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/bs/PcBalanceSheetGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/accrualTransit/PcAccrualTransitGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/accrualTransit/PcAccrualTransitManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/balanceTransit/PcBalanceTransitGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/balanceTransit/PcBalanceTransitManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/cashFlow/PcCashBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/cashFlow/PcCashFlowGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/cashFlow/PcCashFlowManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/cashFlow/PcCashFlowItemManager.dicon" />	
+	<include path="jp/co/ais/trans2/pc/model/ledger/compareBS/BalanceSheetCompareGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/compareBS/BalanceSheetCompareManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/compareCashFlow/PcDirectCompareCashFlowGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/compareCashFlow/PcDirectCompareCashFlowManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/comparePL/ProfitAndLossCompareGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/comparePL/ProfitAndLossCompareManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/depositLedger/PcDirectCashBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/depositLedger/PcDirectCashBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/pl/PcProfitAndLossStatementManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/pl/PcProfitAndLossStatementGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/segment/PcSegmentInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/segment/PcSegmentInfoGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/ss/PcStatementOfSurplusManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/ss/PcStatementOfSurplusGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/tb/PcTrialBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/tb/PcTrialBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/ledger/PcGeneralLedgerManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/ledger/ledger/PcGeneralLedgerGetter.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/category/PcCategoryManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/company/PcCompanyManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/segment/Segment1Manager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/segment/Segment2Manager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/segment/Segment3Manager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/slip/PcSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/pc/model/cashFlow/incDec/PcIncDecReasonManager.dicon" />
+    <include path="jp/co/ais/trans2/pc/model/ws/WorksheetManager.dicon" />
+    <include path="jp/co/ais/trans2/pc/model/rate/PcRateManager.dicon" />
+    <include path="jp/co/ais/trans2/pc/model/convertjournalizingcheck/ConvertJournalizingCheckGetter.dicon" />
+    <include path="jp/co/ais/trans2/pc/model/convertjournalizingcheck/ConvertJournalizingCheckManager.dicon" />
+    <include path="jp/co/ais/trans2/pc/model/consolidatedcompany/ConsolidatedCompanyPolicyManager.dicon" />
+    
+</components>

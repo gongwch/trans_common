@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="dao.dicon"/>
+	<include path="aop.dicon"/>	
+
+	
+	<component name="USR_AUTH_MSTDao" class="jp.co.ais.trans.master.dao.USR_AUTH_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="LOCK_OUT_TBLDao" class="jp.co.ais.trans.master.dao.LOCK_OUT_TBLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="LOCK_OUT_TBL" class="jp.co.ais.trans.master.entity.LOCK_OUT_TBL"/>
+	
+	<component name="UserLockout" instance="prototype" class="jp.co.ais.trans.logic.system.impl.UserLockoutImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>requiredTx</aspect>
+	</component>
+	
+</components>

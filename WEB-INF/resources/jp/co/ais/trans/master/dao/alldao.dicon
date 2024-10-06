@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="dao.dicon"/>
+	<include path="aop.dicon"/>
+	<include path="jp/co/ais/trans/master/entity/allentity.dicon"/>
+	
+	<component name="AUTO_CTLDao" class="jp.co.ais.trans.master.dao.AUTO_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="BAT_CTLDao" class="jp.co.ais.trans.master.dao.BAT_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="BMN_MSTDao" class="jp.co.ais.trans.master.dao.BMN_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="BNK_MSTDao" class="jp.co.ais.trans.master.dao.BNK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="CMP_MSTDao" class="jp.co.ais.trans.master.dao.CMP_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="CUR_MSTDao" class="jp.co.ais.trans.master.dao.CUR_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="DEN_SYU_MSTDao" class="jp.co.ais.trans.master.dao.DEN_SYU_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="DPK_MSTDao" class="jp.co.ais.trans.master.dao.DPK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="EMP_MSTDao" class="jp.co.ais.trans.master.dao.EMP_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="ENV_MSTDao" class="jp.co.ais.trans.master.dao.ENV_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_HDRDao" class="jp.co.ais.trans.master.dao.GL_SWK_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_PTN_HDRDao" class="jp.co.ais.trans.master.dao.GL_SWK_PTN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="GL_CTL_MSTDao" class="jp.co.ais.trans.master.dao.GL_CTL_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="HKM_MSTDao" class="jp.co.ais.trans.master.dao.HKM_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="IF_SWK_DATDao" class="jp.co.ais.trans.master.dao.IF_SWK_DATDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KMK_MSTDao" class="jp.co.ais.trans.master.dao.KMK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR1_MSTDao" class="jp.co.ais.trans.master.dao.KNR1_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR2_MSTDao" class="jp.co.ais.trans.master.dao.KNR2_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR3_MSTDao" class="jp.co.ais.trans.master.dao.KNR3_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR4_MSTDao" class="jp.co.ais.trans.master.dao.KNR4_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR5_MSTDao" class="jp.co.ais.trans.master.dao.KNR5_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR6_MSTDao" class="jp.co.ais.trans.master.dao.KNR6_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KRZ_ZANDao" class="jp.co.ais.trans.master.dao.KRZ_ZANDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KTK_MSTDao" class="jp.co.ais.trans.master.dao.KTK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="PRG_MSTDao" class="jp.co.ais.trans.master.dao.PRG_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="RATE_MSTDao" class="jp.co.ais.trans.master.dao.RATE_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SIM_CTLDao" class="jp.co.ais.trans.master.dao.SIM_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SWK_DTLDao" class="jp.co.ais.trans.master.dao.SWK_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SWK_PTN_DTLDao" class="jp.co.ais.trans.master.dao.SWK_PTN_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SYS_MSTDao" class="jp.co.ais.trans.master.dao.SYS_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SZEI_MSTDao" class="jp.co.ais.trans.master.dao.SZEI_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="TEK_MSTDao" class="jp.co.ais.trans.master.dao.TEK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="TRI_SJ_MSTDao" class="jp.co.ais.trans.master.dao.TRI_SJ_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="TRI_MSTDao" class="jp.co.ais.trans.master.dao.TRI_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="UKM_MSTDao" class="jp.co.ais.trans.master.dao.UKM_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="USR_MSTDao" class="jp.co.ais.trans.master.dao.USR_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="HAITA_CTLDao" class="jp.co.ais.trans.master.dao.HAITA_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KJL_MSTDao" class="jp.co.ais.trans.master.dao.KJL_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="COL_SLT_MSTDao" class="jp.co.ais.trans.master.dao.COL_SLT_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SWK_DEL_DTLDao" class="jp.co.ais.trans.master.dao.SWK_DEL_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_DEL_HDRDao" class="jp.co.ais.trans.master.dao.GL_SWK_DEL_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="DEL_DTLDao" class="jp.co.ais.trans.master.dao.DEL_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="PCI_CHK_CTLDao" class="jp.co.ais.trans.master.dao.PCI_CHK_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_CAL_MSTDao" class="jp.co.ais.trans.master.dao.AP_CAL_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_CBK_MSTDao" class="jp.co.ais.trans.master.dao.AP_CBK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_HOH_MSTDao" class="jp.co.ais.trans.master.dao.AP_HOH_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_SHH_MSTDao" class="jp.co.ais.trans.master.dao.AP_SHH_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_HDRDao" class="jp.co.ais.trans.master.dao.AP_SWK_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_PTN_HDRDao" class="jp.co.ais.trans.master.dao.AP_SWK_PTN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_ZANDao" class="jp.co.ais.trans.master.dao.AP_ZANDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_DEL_HDRDao" class="jp.co.ais.trans.master.dao.AP_SWK_DEL_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AR_SWK_PTN_HDRDao" class="jp.co.ais.trans.master.dao.AR_SWK_PTN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AR_KAI_DATDao" class="jp.co.ais.trans.master.dao.AR_KAI_DATDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AR_ZANDao" class="jp.co.ais.trans.master.dao.AR_ZANDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AR_SWK_HDRDao" class="jp.co.ais.trans.master.dao.AR_SWK_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AR_SWK_DEL_HDRDao" class="jp.co.ais.trans.master.dao.AR_SWK_DEL_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="LNG_MSTDao" class="jp.co.ais.trans.master.dao.LNG_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="SWK_KMK_MSTDao" class="jp.co.ais.trans.master.dao.SWK_KMK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="CM_SKN_MSTDao" class="jp.co.ais.trans.master.dao.CM_SKN_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="EVK_MSTDao" class="jp.co.ais.trans.master.dao.EVK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="T_GL0320_DENDao" class="jp.co.ais.trans.master.dao.T_GL0320_DENDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="T_GL0321Dao" class="jp.co.ais.trans.master.dao.T_GL0321Dao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_UKE_CTLDao" class="jp.co.ais.trans.master.dao.AP_UKE_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="USR_AUTH_MSTDao" class="jp.co.ais.trans.master.dao.USR_AUTH_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="LOCK_OUT_TBLDao" class="jp.co.ais.trans.master.dao.LOCK_OUT_TBLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="PWD_HST_TBLDao" class="jp.co.ais.trans.master.dao.PWD_HST_TBLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="AppropriateCompanyDao" class="jp.co.ais.trans.master.dao.AppropriateCompanyDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	
+</components>

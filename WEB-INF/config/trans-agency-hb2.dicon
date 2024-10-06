@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-agency-hb2.dicon        * -->
+<!-- ********************************* -->
+
+<components>
+
+	<include path="jp/co/ais/trans/agency/hb/dao/alldao.dicon" />
+	<include path="jp/co/ais/trans/agency/hb/entity/allentity.dicon" />
+	<include path="jp/co/ais/trans/agency/hb/logic/alllogic.dicon" />
+	
+	<include path="jp/co/ais/trans/agency/hb/logic/report/data/PKG_HB0080.dicon" />
+	
+</components>

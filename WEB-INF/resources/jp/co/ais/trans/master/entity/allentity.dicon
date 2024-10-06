@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	
+	<component name="AUTO_CTL" class="jp.co.ais.trans.master.entity.AUTO_CTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="BAT_CTL" class="jp.co.ais.trans.master.entity.BAT_CTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="BMN_MST" class="jp.co.ais.trans.master.entity.BMN_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="BNK_MST" class="jp.co.ais.trans.master.entity.BNK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="CMP_MST" class="jp.co.ais.trans.master.entity.CMP_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="CUR_MST" class="jp.co.ais.trans.master.entity.CUR_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="DEN_SYU_MST" class="jp.co.ais.trans.master.entity.DEN_SYU_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="DPK_MST" class="jp.co.ais.trans.master.entity.DPK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="EMP_MST" class="jp.co.ais.trans.master.entity.EMP_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="ENV_MST" class="jp.co.ais.trans.master.entity.ENV_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_HDR" class="jp.co.ais.trans.master.entity.GL_SWK_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_PTN_HDR" class="jp.co.ais.trans.master.entity.GL_SWK_PTN_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="GL_CTL_MST" class="jp.co.ais.trans.master.entity.GL_CTL_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="HKM_MST" class="jp.co.ais.trans.master.entity.HKM_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+	
+	<component name="IF_SWK_DAT" class="jp.co.ais.trans.master.entity.IF_SWK_DAT">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+	
+	<component name="KMK_MST" class="jp.co.ais.trans.master.entity.KMK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KNR1_MST" class="jp.co.ais.trans.master.entity.KNR1_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KNR2_MST" class="jp.co.ais.trans.master.entity.KNR2_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KNR3_MST" class="jp.co.ais.trans.master.entity.KNR3_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KNR4_MST" class="jp.co.ais.trans.master.entity.KNR4_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KNR5_MST" class="jp.co.ais.trans.master.entity.KNR5_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KNR6_MST" class="jp.co.ais.trans.master.entity.KNR6_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KRZ_ZAN" class="jp.co.ais.trans.master.entity.KRZ_ZAN">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KTK_MST" class="jp.co.ais.trans.master.entity.KTK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="PRG_MST" class="jp.co.ais.trans.master.entity.PRG_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="RATE_MST" class="jp.co.ais.trans.master.entity.RATE_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SIM_CTL" class="jp.co.ais.trans.master.entity.SIM_CTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SWK_DTL" class="jp.co.ais.trans.master.entity.SWK_DTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SWK_PTN_DTL" class="jp.co.ais.trans.master.entity.SWK_PTN_DTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SYS_MST" class="jp.co.ais.trans.master.entity.SYS_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SZEI_MST" class="jp.co.ais.trans.master.entity.SZEI_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="TEK_MST" class="jp.co.ais.trans.master.entity.TEK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="TRI_SJ_MST" class="jp.co.ais.trans.master.entity.TRI_SJ_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="TRI_MST" class="jp.co.ais.trans.master.entity.TRI_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="UKM_MST" class="jp.co.ais.trans.master.entity.UKM_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="USR_MST" class="jp.co.ais.trans.master.entity.USR_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="HAITA_CTL" class="jp.co.ais.trans.master.entity.HAITA_CTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="KJL_MST" class="jp.co.ais.trans.master.entity.KJL_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="COL_SLT_MST" class="jp.co.ais.trans.master.entity.COL_SLT_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SWK_DEL_DTL" class="jp.co.ais.trans.master.entity.SWK_DEL_DTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_DEL_HDR" class="jp.co.ais.trans.master.entity.GL_SWK_DEL_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="DEL_DTL" class="jp.co.ais.trans.master.entity.DEL_DTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="PCI_CHK_CTL" class="jp.co.ais.trans.master.entity.PCI_CHK_CTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_CAL_MST" class="jp.co.ais.trans.master.entity.AP_CAL_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_CBK_MST" class="jp.co.ais.trans.master.entity.AP_CBK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_HOH_MST" class="jp.co.ais.trans.master.entity.AP_HOH_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_SHH_MST" class="jp.co.ais.trans.master.entity.AP_SHH_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_HDR" class="jp.co.ais.trans.master.entity.AP_SWK_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_PTN_HDR" class="jp.co.ais.trans.master.entity.AP_SWK_PTN_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_ZAN" class="jp.co.ais.trans.master.entity.AP_ZAN">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_DEL_HDR" class="jp.co.ais.trans.master.entity.AP_SWK_DEL_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AR_SWK_PTN_HDR" class="jp.co.ais.trans.master.entity.AR_SWK_PTN_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AR_KAI_DAT" class="jp.co.ais.trans.master.entity.AR_KAI_DAT">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AR_ZAN" class="jp.co.ais.trans.master.entity.AR_ZAN">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AR_SWK_HDR" class="jp.co.ais.trans.master.entity.AR_SWK_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AR_SWK_DEL_HDR" class="jp.co.ais.trans.master.entity.AR_SWK_DEL_HDR">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="LNG_MST" class="jp.co.ais.trans.master.entity.LNG_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="SWK_KMK_MST" class="jp.co.ais.trans.master.entity.SWK_KMK_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="CM_SKN_MST" class="jp.co.ais.trans.master.entity.CM_SKN_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="T_GL0320_DEN" class="jp.co.ais.trans.master.entity.T_GL0320_DEN">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="T_GL0321" class="jp.co.ais.trans.master.entity.T_GL0321">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+
+	<component name="AP_UKE_CTL" class="jp.co.ais.trans.master.entity.AP_UKE_CTL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+	
+	<component name="USR_AUTH_MST" class="jp.co.ais.trans.master.entity.USR_AUTH_MST">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+	
+	<component name="LOCK_OUT_TBL" class="jp.co.ais.trans.master.entity.LOCK_OUT_TBL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+	
+	<component name="PWD_HST_TBL" class="jp.co.ais.trans.master.entity.PWD_HST_TBL">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>
+	
+
+
+	
+</components>

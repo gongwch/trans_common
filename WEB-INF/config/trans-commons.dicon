@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>
+	
+	<include path="jp/co/ais/trans/common/server/di/InformationLogic.dicon" />
+	<include path="jp/co/ais/trans/common/server/di/TAccountItemUnitLogic.dicon" />
+	<include path="jp/co/ais/trans/common/server/di/TReferenceAuthorityLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/logic/system/UserManager2.dicon" />
+	<include path="jp/co/ais/trans/logic/system/ExecutedLogLogic.dicon" />
+	<include path="jp/co/ais/trans/logic/system/ReleasedFileLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/logic/util/AutoControl.dicon" />
+	<include path="jp/co/ais/trans/logic/util/CurrencyConvert.dicon" />
+	
+	<include path="lock.dicon" />
+
+</components>

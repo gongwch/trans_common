@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<!-- ********************************* -->
+<!-- * trans-account-bg.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+
+	<include path="jp/co/ais/trans/account/bg/logic/BudgetTypeMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/ExecErrorDataLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/ReadErrorDataLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/ExcelConversionPersionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/OldBalanceBudgetDataCreatorLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/OldBGDataCreatorLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/ReadBudgetDataCreatorLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/ReadDataLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/BGDataOperLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/logic/CompilationOfBudgetInputLogic.dicon" />		
+	<include path="jp/co/ais/trans/account/bg/report/BudgetTypeMasterReportLogic.dicon" />	
+	<include path="jp/co/ais/trans/account/bg/logic/BudgetDataManagerLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/report/SectionBudgetCmpReportLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/report/BudgetResultCmpListReportLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/report/BudgetCountListReportLogic.dicon" />
+	<include path="jp/co/ais/trans/account/bg/report/CompilationOfBudgetInputReportLogic.dicon" />
+	
+</components>

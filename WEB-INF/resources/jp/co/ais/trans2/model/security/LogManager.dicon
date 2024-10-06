@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+    <component name="LogManager" instance="prototype" class="jp.co.ais.trans2.model.security.LogManagerImpl">
+        <aspect>aop.traceInterceptor</aspect>
+        <aspect pointcut="log">j2ee.requiredTx</aspect>
+    </component>
+
+</components>

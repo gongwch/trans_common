@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="BAT_CTLDao" class="jp.co.ais.trans.master.dao.BAT_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="BatchUnLockLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.BatchUnLockLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+	</component>
+
+</components>

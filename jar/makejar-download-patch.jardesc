@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="MS932" standalone="no"?>
+<jardesc>
+    <jar path="trans-common2.2/jar/trans-0-download-patch.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/trans-common2.2/jar/makejar-download-patch.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/trans-common2.2/jar/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=trans-common2.2/WEB-INF\/src&lt;jp.co.ais.trans.common.server{TServletBase.java"/>
+        <javaElement handleIdentifier="=trans-common2.2/WEB-INF\/src&lt;jp.co.ais.trans2.common.server{TDownloadServlet.java"/>
+        <javaElement handleIdentifier="=trans-common2.2/WEB-INF\/src&lt;jp.co.ais.trans2.common.file{FileUtil.java"/>
+        <javaElement handleIdentifier="=trans-common2.2/WEB-INF\/src&lt;jp.co.ais.trans2.common.server{TServlet.java"/>
+        <javaElement handleIdentifier="=trans-common2.2/WEB-INF\/src&lt;jp.co.ais.trans.common.client{TRequestBase.java"/>
+    </selectedElements>
+</jardesc>

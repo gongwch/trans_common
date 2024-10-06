@@ -1,0 +1,20 @@
+UPDATE EMP_MST SET
+KAI_CODE = /*dto.KAI_CODE*/,
+EMP_CODE = /*dto.EMP_CODE*/,
+EMP_NAME = /*dto.EMP_NAME*/,
+EMP_NAME_S = /*dto.EMP_NAME_S*/,
+EMP_NAME_K = /*dto.EMP_NAME_K*/,
+EMP_FURI_BNK_CODE = /*dto.EMP_FURI_BNK_CODE*/,
+EMP_FURI_STN_CODE = /*dto.EMP_FURI_STN_CODE*/,
+EMP_YKN_NO = /*dto.EMP_YKN_NO*/,
+EMP_KOZA_KBN = /*dto.EMP_KOZA_KBN*/,
+EMP_YKN_KANA = /*dto.EMP_YKN_KANA*/,
+EMP_CBK_CODE = /*dto.EMP_CBK_CODE*/,
+STR_DATE = /*dto.STR_DATE*/,
+END_DATE = /*dto.END_DATE*/,
+INP_DATE = /*dto.INP_DATE*/,
+UPD_DATE = /*dto.UPD_DATE*/,
+PRG_ID = /*dto.PRG_ID*/,
+USR_ID = /*dto.USR_ID*/
+WHERE KAI_CODE = /*dto.KAI_CODE*/
+AND EMP_CODE = /*dto.EMP_CODE*/

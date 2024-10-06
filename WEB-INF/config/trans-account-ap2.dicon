@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+
+	<include path="jp/co/ais/trans2/ap/dao/AP_ZANSearchDao.dicon" />
+	<include path="jp/co/ais/trans2/ap/dao/PRO_AP0131Dao.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/journal/payment/ExPaymentLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/journal/payment/ExPaymentSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/journal/payment/ExPaymentSlipLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/journal/payment/ExPayFunctionalCurrency.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/payment/ExternalAcceptClosePaymentImpl.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/payment/PaymentTotalSheetManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/payment/PaymentTotalSheetGetter.dicon" />
+	<include path="jp/co/ais/trans2/ap/logic/report/data/PKG_AP0140.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/payment/PaymentDetailManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/payment/PaymentDetailSheetLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/payment/ExternalPayBankTrsfManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/payment/ExternalPayBankTrsfDao.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/payment/ExternalPaymentBankTransferRequestLogic.dicon" />
+	
+	<!-- OLD
+	<include path="jp/co/ais/trans2/ap/model/payment/checkList/PaymentCheckListManager.dicon" />
+	-->
+	
+    <include path="jp/co/ais/trans2/ap/model/payment/checkList/PaymentCheckListSearchManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/ap/model/payment/checkList/PaymentCheckListLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/payment/checkList/PaymentCheckListInfoDao.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/foreign/AbroadRemittanceReqManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/foreign/AbroadRemittanceRequestLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/foreign/AbroadRemittanceCheckListManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/foreign/AbroadRemittanceAdjustmentCheckList.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/foreign/AbroadRemittanceReqDataMakingManager.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/foreign/AbroadRemittanceRequestDataLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/balance/AccountPaymentBalanceBookGetter.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/balance/AccountPaymentBalanceManager.dicon" />
+
+    <include path="jp/co/ais/trans2/ap/model/balance/APBalanceAgingDao.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/balance/APBalanceAgingManager.dicon" />
+	
+    <include path="jp/co/ais/trans2/ap/model/payment/PaymentMethodModifyLogic.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/payment/PaymentSlipListManager.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/payment/PaymentManager.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/payment/fb/FBManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/ap/model/slip/monthly/APMonthlyPatternSlipDao.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/slip/monthly/APMonthlyPatternSlipManager.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/slip/monthly/APMonthlyPatternTradeManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/ap/model/bypayee/TotalSheetByPayeeManager.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/bypayee/TotalSheetByPayeeGetter.dicon" />
+    
+    <include path="jp/co/ais/trans2/ap/model/foreign/AbroadAdjustmentDao.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/foreign/AbroadAdjustmentManager.dicon" />
+
+    <include path="jp/co/ais/trans2/model/slip/panel/APSlipPanelLogic.dicon" />
+    
+</components>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetBroughtForward.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetDelete.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/TradeManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetGetter.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetEntry.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetMove.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetReMove.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetImpairment.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetSell.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetTruncate.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetPackageSell.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/RetirementObligation.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/asset/AssetImportDataConverter.dicon" />	
+	<include path="jp/co/ais/trans2/fa/logic/asset/TradeNoManager.dicon" />
+
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaSlipIssuerFactory.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaAcquisitionSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaRemoveSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaSellSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaPackageSellSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaMoveSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaImpairmentSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaJokyoEntrySlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaDepreciationSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaAssyukuSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaJokyoDeprSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaJokyoInterestSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaAutoTransferSlipLogic.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/slip/FaIfCtlDao.dicon" />
+    <include path="jp/co/ais/trans2/fa/logic/slip/FaIfCtlManager.dicon" />
+    <include path="jp/co/ais/trans2/fa/logic/slip/JournalizingDataExportDao.dicon" />
+    <include path="jp/co/ais/trans2/fa/logic/slip/JournalizingDataExportManager.dicon" />
+    <include path="jp/co/ais/trans2/fa/logic/slip/JournalizingGetterSetting.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/appendix/Appendix16Manager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/appendix/Appendix16_1Dao.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/appendix/Appendix16_2Dao.dicon" />
+
+	<include path="jp/co/ais/trans2/fa/logic/importData/depr/DeprImportDataConverter.dicon" />
+<!--
+	<include path="jp/co/ais/trans2/fa/logic/importData/depr/FaDeprImportInfoManager.dicon" />
+-->
+    <include path="jp/co/ais/trans2/fa/logic/importData/depr/FaDeprImportInfoManagerEx.dicon" />    	
+	<include path="jp/co/ais/trans2/fa/logic/importData/depr/FaEstimatedDeprDtlManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/logic/importData/assyuku/AssyukuImportDataConverter.dicon" />
+<!--
+	<include path="jp/co/ais/trans2/fa/logic/importData/assyuku/FaAssyukuImportInfoManager.dicon" />
+-->
+    <include path="jp/co/ais/trans2/fa/logic/importData/assyuku/FaAssyukuImportInfoManagerEx.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/importData/assyuku/FaEstimatedAssyukuDtlManager.dicon" />
+
+	<include path="jp/co/ais/trans2/fa/logic/depr/Depreciater.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/depr/DepreciationMethodFactoryJPN.dicon" />
+	<!-- <include path="jp/co/ais/trans2/fa/logic/depr/DepreciationMethodFactoryStandard.dicon" /> --> 
+	<include path="jp/co/ais/trans2/fa/logic/depr/assyuku/AssyukuDepreciater.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/depr/jokyo/JokyoDepreciater.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/depr/interest/CalculateInterest.dicon" />
+
+<!--
+	<include path="jp/co/ais/trans2/fa/logic/info/FaManager.dicon" />
+-->
+	<include path="jp/co/ais/trans2/fa/logic/info/FaManagerEx.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/logic/info/FaDepreciationScheduleInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaDepreciationStatementInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaAssyukuScheduleLedgerInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaScheduleLedgerInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaAssetImportInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaDeprAssetDeclarationInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaLedgerInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaDepreciationStatementInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/logic/info/FaAnnualDepreciationInfoManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/dao/FaBaseDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaBookMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaDeprDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaJokyoDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaAssyukuDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaAssyukuScheduleLedgerDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaCityMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaDeclareMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaInterestDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaTradeDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaAssetKindMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaAssetKindBookMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaDepreciationScheduleDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaDepreciationStatementDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaScheduleLedgerDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaLedgerDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaConsMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaCtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaDetMstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaTradeSubDtlDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaKnr1MstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaKnr2MstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaKnr3MstDao.dicon" />
+	<include path="jp/co/ais/trans2/fa/dao/FaAssetGrpMstDao.dicon" />
+
+	<include path="jp/co/ais/trans2/fa/dao/FaAnnualDepreciationDao.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/asset/group/FaAssetGroupInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/asset/kind/FaAssetKindInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/asset/number/AssetNoManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/city/FaCityInfoManager.dicon" />
+<!--
+	<include path="jp/co/ais/trans2/fa/model/close/FaCloseManager.dicon" />
+-->
+	<include path="jp/co/ais/trans2/fa/model/close/FaCloseManagerEx.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/construction/FaConstructionInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/construction/detail/FaDetailInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/control/FaControllInfoManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/declare/FaDeclareManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/management/FaKnr1InfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/management/FaKnr2InfoManager.dicon" />
+	<include path="jp/co/ais/trans2/fa/model/management/FaKnr3InfoManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/fa/model/util/FaConfigManager.dicon" />
+	
+</components>

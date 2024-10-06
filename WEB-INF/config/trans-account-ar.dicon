@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-account-ar.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+
+	<include path="jp/co/ais/trans/account/ar/logic/common/ItemInfoLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ar/logic/info/RequestDivisionMstLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ar/logic/journal/SlipManagerLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/journal/JournalEntryLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/journal/SlipFacadeLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/journal/CashAutoSlipLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/DepositDataEraseLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/DepositDataFindLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/DepositDeleteLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/DepositManagerLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/DepositFBDataReadLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/DepositFBDataSaveLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/deposit/FileIO.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ar/logic/erase/CashErasingLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/erase/CashErasingManagerLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/erase/CashInPolicyMstLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/erase/AccountsReceivableErasingLogic.dicon" />
+
+	<include path="jp/co/ais/trans/account/ar/logic/balance/AccountsReceivableBalanceLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ar/logic/report/ReportEntryLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/AccountsReceivableListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/AccountsReceivableDtlLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/CashInDetailListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/ErasingResultListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/MensalCashInDueTotalLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ar/logic/report/data/PKG_AR0030.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/data/PKG_AR0040.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/data/PKG_AR0120.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/data/PKG_AR5020.dicon" />
+	<include path="jp/co/ais/trans/account/ar/logic/report/data/PKG_AR0060.dicon" />
+
+</components>

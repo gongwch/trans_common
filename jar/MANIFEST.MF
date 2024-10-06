@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Application-Name: TRANS2
+Package-Title: TRANS2
+Package-Version: 2.2
+Package-Vendor: AIS
+Specification-Title: TRANS2
+Specification-Version: 2.2.17.2020.11
+Specification-Vendor: AIS
+Permissions: all-permissions
+Codebase: *

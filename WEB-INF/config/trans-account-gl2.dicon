@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>
+	<include path="jp/co/ais/trans2/gl/model/slip/InputGLSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/InputReversingSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/BsCalculateEraseSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/OffsetClearanceSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/monthly/MonthlyPatternCheckListDao.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/monthly/MonthlyPatternCheckListManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/monthly/MonthlyPatternSlipDao.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/monthly/MonthlyPatternTransferSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/slip/monthly/MonthlyPatternTransferTradeManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/ledger/GeneralLedgerGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/ledger/GeneralLedgerManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/trialBalance/TrialBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/trialBalance/TrialBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/pl/ProfitAndLossStatementManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/pl/ProfitAndLossStatementGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/bs/BalanceSheetManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/bs/BalanceSheetGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/taxLedger/TaxLedgerGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/taxLedger/TaxLedgerManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/taxLedger/TaxSumLedgerGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/taxLedger/TaxSumLedgerManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/taxLedger/TaxAccountLedgerGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/taxLedger/TaxAccountLedgerManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/balance/BalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/balance/BalanceGetterSetting.dicon" /><!-- NEW -->
+	<include path="jp/co/ais/trans2/gl/model/balance/BSBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/balance/BSBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/balance/ManagementItemBalanceManager.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/balance/ManagementItemBalanceGetter.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/balance/BalanceCompareManager.dicon"/>
+    <include path="jp/co/ais/trans2/gl/model/balance/BalanceCompareGetter.dicon"/>
+    <include path="jp/co/ais/trans2/gl/model/balance/BalanceTransitManager.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/balance/BalanceTransitGetter.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/balance/OccurTransitGetter.dicon"/>
+
+    <include path="jp/co/ais/trans2/gl/model/balance/BSBalanceAgingDao.dicon"/>
+    <include path="jp/co/ais/trans2/gl/model/balance/BSBalanceAgingManager.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/balance/ConsistencyCheckDao.dicon" />
+
+    <include path="jp/co/ais/trans2/gl/model/cashflow/factor/CashFlowFactorGetter.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/cashflow/factor/CashFlowFactorManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/cashflowCompare/CashFlowCompareGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/cashflowCompare/CashFlowCompareManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/cashflow/IncDecReasonManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/evaluation/EvaluationGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/evaluation/EvaluationSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/evaluation/EvaluationManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/depositLedger/CashBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/depositLedger/CashBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/journalizing/JournalizingCheckList.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/journalizing/JournalizingCheckListDao.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/journalizing/JournalizingPatternCheckListDao.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/journalizing/JournalizingHistoryCheckListDao.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/journalizing/JournalizingSearchGetter.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/journalizing/JournalizingSearchManager.dicon"/>
+	<include path="jp/co/ais/trans2/gl/model/journalizing/GL0361JournalizingSearchManager.dicon"/><!-- NEW -->
+	<include path="jp/co/ais/trans2/gl/model/journalizing/GL0361JournalizingSearchGetter.dicon"/><!-- NEW -->
+	<include path="jp/co/ais/trans2/gl/model/depositLedger/CashBooksManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/depositLedger/CashBooksGetter.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/othersystem/OtherSystemServiceManager.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/othersystem/OtherSystemDao.dicon" />
+	<include path="jp/co/ais/trans2/gl/model/othersystem/OtherSystemDataChecker.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/othersystem/OtherSystemDataConverter.dicon" /><!--server file check-->
+	<include path="jp/co/ais/trans2/gl/model/soa/StatementOfAccountDao.dicon" />
+    
+    <include path="jp/co/ais/trans2/gl/model/voyage/VoyageDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/voyage/VoyageManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/voyage/item/VoyageItemDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/voyage/item/VoyageItemManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/voyage/calc/VoyageCalculationDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/voyage/calc/VoyageCalculationManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/gl/model/balance/BalanceDataExportDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/balance/BalanceDataExportManager.dicon" />
+
+    <include path="jp/co/ais/trans2/gl/model/negative/NegativeBalanceSlipDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/negative/NegativeBalanceSlipManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/bg/model/type/BudgetTypeManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/costdriver/CostDriverManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/gl/model/itemunit/ItemUnitManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/allocationrule/AllocationRuleManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/gl/model/allocation/AllocateCalculationDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/allocation/AllocateCalculationManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/gl/model/allocationcalc/AllocationCalcCheckListGetter.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/allocationcalc/AllocationCalcCheckListManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/gl/model/slipevidence/SlipEvidenceManager.dicon" />
+   
+    
+    <!-- 間接法 -->
+    <!--
+    <include path="jp/co/ais/trans2/gl/model/cashflow/CashFlowManager.dicon" />
+    -->
+    <!-- 直接法 -->
+    <include path="jp/co/ais/trans2/gl/model/cashflow/DirectMethodCashFlowManager.dicon" />
+
+    <include path="jp/co/ais/trans2/gl/model/slip/GLSlipLogic.dicon" />
+    <include path="jp/co/ais/trans2/ap/model/slip/APSlipLogic.dicon" />
+    <include path="jp/co/ais/trans2/ar/model/slip/ARSlipLogic.dicon" />
+
+	<!--
+	<include path="jp/co/ais/trans2/gl/model/slip/SeaCASTGLSlipLogic.dicon" />
+	<include path="jp/co/ais/trans2/ap/model/slip/SeaCASTAPSlipLogic.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/slip/SeaCASTARSlipLogic.dicon" />
+	 -->
+	 
+	<include path="jp/co/ais/trans2/gl/model/customersledger/CustomersLedgerManager.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/customersledger/CustomersLedgerDao.dicon" />
+    <include path="jp/co/ais/trans2/gl/model/balance/ActualCompareManager.dicon"/>
+    <include path="jp/co/ais/trans2/gl/model/balance/ActualCompareGetter.dicon"/>
+    <include path="jp/co/ais/trans2/gl/model/budget/BudgetGetter.dicon"/>
+
+    <include path="jp/co/ais/trans2/model/slip/panel/GLSlipPanelLogic.dicon" />
+
+</components>

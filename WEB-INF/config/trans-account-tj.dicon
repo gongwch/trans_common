@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+	<include path="jp/co/ais/trans2/tj/model/tax/TjConsumptionTaxManager.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/tax/TjConsumptionTaxDao.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/item/TjItemManager.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/item/TjItemDao.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/build/BuildManager.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/balance/TjBalanceGetter.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/balance/ItemizedStatementGetter.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/balance/BalanceSheetGetter.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/balance/ProfitAndLossStatementGetter.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/balance/ChangesInNetAssetsStatementGetter.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/outline/OutlineStatementGetter.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/tax/IfConsumptionTaxDao.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/tax/IfCorporationTaxDao.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/fa/IfDepreciationDao.dicon" />
+	<include path="jp/co/ais/trans2/tj/model/lm/IfInterestExpenseDao.dicon" />
+</components>

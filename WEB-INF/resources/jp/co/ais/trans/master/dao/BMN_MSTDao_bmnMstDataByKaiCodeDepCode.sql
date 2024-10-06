@@ -1,0 +1,7 @@
+SELECT BMN.DEP_CODE,
+       BMN.DEP_NAME_S,
+       BMN.DEP_NAME_K
+  FROM BMN_MST BMN
+ WHERE BMN.KAI_CODE = /*kaiCode*/
+   AND DEP_CODE = /*depCode*/
+   AND BMN.DEP_KBN = 0

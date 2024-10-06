@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="AP_SHH_MSTDao" class="jp.co.ais.trans.master.dao.AP_SHH_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="PaymentPolicyLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.PaymentPolicyLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>AP_SHH_MSTDao</arg>
+	</component>	
+
+</components>

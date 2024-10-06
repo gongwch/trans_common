@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+
+<components>
+	
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+	
+	<component name="EVK_MSTDao" class="jp.co.ais.trans.master.dao.EVK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="ENV_MSTDao" class="jp.co.ais.trans.master.dao.ENV_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CompanyHOrgCodeDao" class="jp.co.ais.trans.master.dao.CompanyHOrgCodeDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CompanyHLvlListDao" class="jp.co.ais.trans.master.dao.CompanyHLvlListDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CompanyHGetENVListDao" class="jp.co.ais.trans.master.dao.CompanyHGetENVListDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CompanyHierarchicalMasterLogic"  instance="prototype" class="jp.co.ais.trans.master.logic.impl.CompanyHierarchicalMasterLogicImpl">
+		<aspect>j2ee.requiredTx</aspect>
+		<aspect>aop.traceInterceptor</aspect>
+	</component>	
+
+</components>

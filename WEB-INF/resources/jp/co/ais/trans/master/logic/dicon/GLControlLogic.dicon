@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="GL_CTL_MSTDao" class="jp.co.ais.trans.master.dao.GL_CTL_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="GL_CTL_MST" class="jp.co.ais.trans.master.entity.GL_CTL_MST">
+	</component>
+	
+	<component name="GLControlLogic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.GLControlLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>GL_CTL_MSTDao</arg>
+
+		<property name="entity">GL_CTL_MST</property>
+	</component>	
+
+</components>

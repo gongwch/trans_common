@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************************** -->
+<!-- * S2Container load default root config.		-->
+<!-- ********************************************** -->
+
+<components>
+
+	<include path="s2container.dicon"/>
+	<include path="trans.dicon" />
+	<include path="trans2.dicon" />
+
+</components>

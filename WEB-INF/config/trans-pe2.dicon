@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-pe2.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+    <include path="jp/co/ais/trans2/pe/model/portcontrol/PortControlManager.dicon" />
+    <include path="jp/co/ais/trans2/pe/model/item/PEItemManager.dicon" />
+    <include path="jp/co/ais/trans2/pe/model/agency/AgencyManager.dicon" />
+    <include path="jp/co/ais/trans2/pe/model/agency/AgencyDao.dicon" />
+</components>

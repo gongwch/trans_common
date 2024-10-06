@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+    <include path="jp/co/ais/trans2/tc/model/settlement/SettlementSlipDao.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/settlement/SettlementSlipManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/settlement/StatementOfAccountDao.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/settlement/TcOffHireManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/settlement/TcOffHireDao.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/period/SplitPeriodDao.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/period/SplitPeriodManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/period/SplitPeriodSlipFactory.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/ledger/LedgerOutPutGetter.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/ledger/LedgerOutPutManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/debitnote/DebitNoteManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/debitnote/DebitNoteDao.dicon" />
+    
+    <include path="jp/co/ais/trans2/tc/model/owner/TCOwnerManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/tccontrol/TCControlManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/tcitem/TCItemManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/contract/TCContractManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/contract/TCContractDao.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/salist/SaListManager.dicon" />
+    <include path="jp/co/ais/trans2/tc/model/image/ImageMasterManager.dicon" />
+</components>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="KNR2_MSTDao" class="jp.co.ais.trans.master.dao.KNR2_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KNR2_MST" class="jp.co.ais.trans.master.entity.KNR2_MST">
+	</component>
+	
+	<component name="Management2Logic" instance="prototype" class="jp.co.ais.trans.master.logic.impl.Management2LogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+		<arg>KNR2_MSTDao</arg>
+
+		<property name="entity">KNR2_MST</property>
+	</component>	
+
+</components>

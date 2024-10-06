@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+  <include path="trans-commons.dicon" />
+  <include path="trans-master.dicon" />
+  <include path="trans-account-gl.dicon" />
+  <include path="trans-account-ap.dicon" />
+  <include path="trans-account-ar.dicon" />
+  <include path="trans-account-lm.dicon" />
+  <include path="trans-account-pc.dicon" />
+ 
+</components>

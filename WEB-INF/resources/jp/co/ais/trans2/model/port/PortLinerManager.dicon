@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>  
+	<include path="dao.dicon"/>
+	<include path="aop.dicon"/>
+
+	<component name="PortLinerManager" class="jp.co.ais.trans2.model.port.PortLinerManagerImpl">
+		<aspect>dao.interceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+	</component>
+	
+	<component name="PortLinerDao" class="jp.co.ais.trans2.model.port.PortLinerDaoImpl">
+        <aspect>dao.interceptor</aspect>
+    </component>
+
+</components>

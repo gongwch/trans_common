@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="ReleasedFileLogic" instance="prototype" class="jp.co.ais.trans.logic.system.impl.ReleasedFileLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+	</component>	
+
+</components>

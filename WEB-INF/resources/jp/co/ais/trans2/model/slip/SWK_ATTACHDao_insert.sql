@@ -1,0 +1,21 @@
+INSERT INTO SWK_ATTACH
+  (KAI_CODE
+  ,SWK_DEN_NO
+  ,SEQ
+  ,EMP_CODE
+  ,FILE_NAME
+  ,FILE_DATA
+  ,INP_DATE
+  ,PRG_ID
+  ,USR_ID)
+VALUES
+  (/*entity.KAI_CODE*/
+  ,/*entity.SWK_DEN_NO*/
+  ,/*entity.SEQ*/
+  ,/*entity.EMP_CODE*/
+  ,/*entity.FILE_NAME*/
+  ,/*entity.FILE_DATA*/
+  ,/*entity.INP_DATE*/
+  ,/*entity.PRG_ID*/
+  ,/*entity.USR_ID*/
+  )

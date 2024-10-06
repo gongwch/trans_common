@@ -1,0 +1,25 @@
+INSERT INTO KTK_MST (
+KAI_CODE,
+KTK_KAI_CODE,
+KTK_DEP_CODE,
+KTK_KMK_CODE,
+KTK_HKM_CODE,
+KTK_UKM_CODE,
+INP_DATE,
+UPD_DATE,
+PRG_ID,
+USR_ID,
+KTK_TRI_CODE
+) VALUES (
+/*dto.KAI_CODE*/,
+/*dto.KTK_KAI_CODE*/,
+/*dto.KTK_DEP_CODE*/,
+/*dto.KTK_KMK_CODE*/,
+/*dto.KTK_HKM_CODE*/,
+/*dto.KTK_UKM_CODE*/,
+/*dto.INP_DATE*/,
+/*dto.UPD_DATE*/,
+/*dto.PRG_ID*/,
+/*dto.USR_ID*/,
+/*dto.KTK_TRI_CODE*/
+)

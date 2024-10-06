@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="dao.dicon"/>
+	<include path="aop.dicon"/>	
+	
+	<include path="lock.dicon" />
+	<include path="jp/co/ais/trans/logic/system/UserPassword.dicon" />
+	<include path="jp/co/ais/trans/logic/system/UserLockout.dicon" />
+	
+	<component name="ENV_MSTDao" class="jp.co.ais.trans.master.dao.ENV_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="BMN_MSTDao" class="jp.co.ais.trans.master.dao.BMN_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CMP_MSTDao" class="jp.co.ais.trans.master.dao.CMP_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="USR_MSTDao" class="jp.co.ais.trans.master.dao.USR_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="PCI_CHK_CTLDao" class="jp.co.ais.trans.master.dao.PCI_CHK_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CUR_MSTDao" class="jp.co.ais.trans.master.dao.CUR_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="EMP_MSTDao" class="jp.co.ais.trans.master.dao.EMP_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="old-UserManager" instance="prototype" class="jp.co.ais.trans.logic.system.impl.UserManagerImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>requiredTx</aspect>
+	</component>
+	
+</components>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="jp/co/ais/trans/account/ap/dao/alldao.dicon" />
+	<include path="jp/co/ais/trans/account/ap/entity/allentity.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/PaymentDetailSheetLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/CommonSearchLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/AmountSetting.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/RemittancePurpose.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/PaymentCheckListLogic.dicon" />		
+	<include path="jp/co/ais/trans/account/ap/logic/ExternalPaymentBankTransferRequestOutputInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/PaymentTotalTableLogic.dicon" />	
+
+	<include path="jp/co/ais/trans/account/ap/logic/AccountsPayableBalanceDetailSheetOutputInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/AccountsPayableBalanceDetailSheetLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/AccountsPayableBalanceListTableLogic.dicon" />
+
+	<include path="jp/co/ais/trans/account/ap/logic/payment/PaymentProcessEndLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/PaymentSettleMain.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/dao/paymentDao.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/payablebalance/ExternalAcceptClosePayableBalanceImpl.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/payment/ExternalAcceptClosePaymentImpl.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/payment/ExternalAcceptCloseImpl.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/payment/EmpPayLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/journal/slip/ExternalPaymentAutomaticMakeLogic.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/journal/payment/ExPaymentLogic.dicon" />
+	
+
+	<include path="jp/co/ais/trans/account/ap/logic/AP0450Logic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/AbroadRemittanceAdjustmentCheckList.dicon" />	
+	
+	<include path="jp/co/ais/trans/account/ap/logic/journal/JournalImpl.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/journal/slip/AbroadRemittanceAdjustmentInputImpl.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/AP0150Logic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/payment/PaymentReservationLogicImpl.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/payablebalance/PayableBalanceLogicImpl.dicon" />
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/PKG_AP0230.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/PKG_AP0240.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/AP0170.dicon" />
+
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/AP0171.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/PKG_AP0140.dicon" />
+
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/PKG_AP0160.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/PKG_AP0262.dicon" />
+
+	<include path="jp/co/ais/trans/account/ap/logic/report/data/PKG_AP0160.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/TemporaryPaymentInputLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/ap/logic/ExpenseSettlementInputLogic.dicon" />
+</components>

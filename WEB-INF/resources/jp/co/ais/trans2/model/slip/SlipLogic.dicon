@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+	
+	<component name="NEW-SWK_DTLDao" class="jp.co.ais.trans2.model.slip.SWK_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="NEW-SWK_DEL_DTLDao" class="jp.co.ais.trans2.model.slip.SWK_DEL_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="NEW-DEL_DTLDao" class="jp.co.ais.trans2.model.slip.DEL_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="NEW-SWK_PTN_DTLDao" class="jp.co.ais.trans2.model.slip.SWK_PTN_DTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="KTK_MSTDao" class="jp.co.ais.trans.master.dao.KTK_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+		
+	<component name="SZEI_MSTDao" class="jp.co.ais.trans.master.dao.SZEI_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="CompanyTransfer" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.CompanyTransfer"/>
+    <component name="GroupCompanyTransfer" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.GroupCompanyTransfer"/>
+	<component name="GroupCompanyTransferDifferentCurrency" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.GroupCompanyTransferDifferentCurrency"/>
+	<component name="FunctionalCurrency" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.FunctionalCurrency"/>
+	<component name="FunctionalSettlementCurrency" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.FunctionalSettlementCurrency"/>
+	<component name="TaxJournalIssuer" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.TaxJournalIssuer"/>
+	<component name="HeaderCheck" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.HeaderCheck"/>
+	<component name="JournalDetailCheck" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.JournalDetailCheck"/>
+    <component name="LossOrProfit" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.LossOrProfit"/>
+	<component name="SlipNoCreator" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.SlipNoCreator"/>
+	
+    <component name="SlipChecker" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.SlipChecker"/>
+    <component name="SlipHeaderChecker" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.SlipHeaderChecker"/>
+    <component name="SlipDetailChecker" instance="prototype" class="jp.co.ais.trans2.model.slip.parts.SlipDetailChecker"/>
+    
+</components>

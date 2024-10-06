@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+    <component name="AprvRoleManager" instance="prototype" class="jp.co.ais.trans2.model.aprvrole.AprvRoleManagerImpl">
+        <aspect>aop.traceInterceptor</aspect>
+        <aspect>j2ee.requiredTx</aspect>
+    </component>
+    <component name="AprvRoleGroupManager" instance="prototype" class="jp.co.ais.trans2.model.aprvrole.AprvRoleGroupManagerImpl">
+        <aspect>aop.traceInterceptor</aspect>
+        <aspect>j2ee.requiredTx</aspect>
+    </component>
+
+</components>

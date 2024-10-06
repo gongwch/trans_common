@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<Configuration status="off">
+	<Properties>
+		<Property name="exeLogPattern">%d&lt;&gt;%m%n</Property>
+		<Property name="consolePattern">%-5p[%d{yyyy/MM/dd HH:mm:ss.SSS}] %m%n</Property>
+		<Property name="filePattern">%-5p[%d{yyyy/MM/dd HH:mm:ss.SSS}] %m%n</Property>
+		<Property name="s2cPattern">%-5p[%d] %m%n</Property>
+		<Property name="s2fPattern">%-5p[%d] %m%n</Property>
+
+		<Property name="transLogPath">C:/temp</Property>
+		<Property name="transFileName">trans.log</Property>
+		<Property name="s2LogPath">C:/temp</Property>
+		<Property name="s2FileName">trans-s2.log</Property>
+
+	</Properties>
+
+	<Appenders>
+		<!-- ExecuteLog file Appender property -->
+		<File name="exeLogAppender" fileName="dummy.log" append="false">
+			<PatternLayout pattern="${exeLogPattern}" />
+		</File>
+		<!-- TRANS Console -->
+		<Console name="trans" target="SYSTEM_OUT">
+			<PatternLayout pattern="${consolePattern}" />
+		</Console>
+		<!-- TRANS File -->
+		<File name="file" fileName="${transLogPath}/${transFileName}"
+			append="true">
+			<PatternLayout pattern="${filePattern}" />
+		</File>
+		<!-- S2 console -->
+		<Console name="S2Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${s2cPattern}" />
+		</Console>
+		<!-- S2 File -->
+		<File name="s2File" fileName="${s2LogPath}/${s2FileName}">
+			<PatternLayout pattern="${s2fPattern}" />
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<!-- debug < info < warn < error < fatal -->
+		<Logger name="trans" level="debug" additivity="false">
+			<AppenderRef ref="trans" />
+			<AppenderRef ref="file" />
+		</Logger>
+		<Logger name="exeLog" level="debug" additivity="false">
+			<AppenderRef ref="exeLogAppender" />
+		</Logger>
+		<Logger name="org.apache.log4j.xml" level="info" />
+		<Root level="info">
+			<AppenderRef ref="trans" />
+		</Root>
+	</Loggers>
+
+</Configuration>

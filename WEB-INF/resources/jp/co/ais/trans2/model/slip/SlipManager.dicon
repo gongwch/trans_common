@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.3//EN"
+	"https://www.seasar.org/dtd/components23.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+	
+	<component name="SlipDao" class="jp.co.ais.trans2.model.slip.SlipDaoImpl">
+		<aspect>dao.interceptor</aspect>
+		<aspect>j2ee.requiredTx</aspect>
+	</component>
+
+    <component name="SWK_DTLDao" class="jp.co.ais.trans2.model.slip.SWK_DTLDao">
+        <aspect>dao.interceptor</aspect>
+    </component>
+	
+	<component name="SlipManager" instance="prototype"
+        class="jp.co.ais.trans2.model.slip.SlipManagerImpl">
+        <aspect>aop.traceInterceptor</aspect>
+        <aspect pointcut="entry,delete,lock,entryPattern,approveSlip,denySlip,cancelApproveSlip,approveSlipForFieldState,denySlipForFieldState,cancelApproveSlipForFieldState">j2ee.requiredTx</aspect>
+    </component>
+    
+	<component name="SlipLogicFactory" instance="prototype" class="jp.co.ais.trans2.model.slip.SlipLogicFactoryImpl"/>
+	<component name="DeleteSlipListGetter" instance="prototype" class="jp.co.ais.trans2.model.slip.DeleteSlipListGetterImpl"/>
+    <component name="SlipLayoutDefine" instance="prototype" class="jp.co.ais.trans2.common.model.report.SlipLayoutDefine"/>
+    <component name="SlipPanelLogicFactory" instance="prototype" class="jp.co.ais.trans2.model.slip.panel.SlipPanelLogicFactoryImpl"/>
+    
+
+</components>

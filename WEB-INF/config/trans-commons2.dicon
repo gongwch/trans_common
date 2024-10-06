@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>
+	<include path="jp/co/ais/trans2/model/attach/verify/AttachmentVerifyManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/SystemManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/UserExclusiveManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/UserAuthenticater.dicon" />
+	<include path="jp/co/ais/trans2/model/security/UserAuthUpdateManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/ProgramRoleManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/ProgramExclusiveManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/CodeExclusiveManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/PasswordManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/PasswordPolicyDao.dicon" />
+	<include path="jp/co/ais/trans2/model/security/LoginLockOutDao.dicon" />
+	<include path="jp/co/ais/trans2/model/security/LogManager.dicon" />
+	<include path="jp/co/ais/trans2/model/security/LogDao.dicon" />
+	<include path="jp/co/ais/trans2/model/security/BatchUnLockManager.dicon" />
+	<include path="jp/co/ais/trans2/model/user/UserManager.dicon" />
+	<include path="jp/co/ais/trans2/model/user/UserDao.dicon" />
+	<include path="jp/co/ais/trans2/model/user/UserRoleManager.dicon" />
+	<include path="jp/co/ais/trans2/model/company/CompanyDao.dicon" />
+	<include path="jp/co/ais/trans2/model/company/CompanyManager.dicon" />
+	<include path="jp/co/ais/trans2/model/program/MenuManager.dicon" />
+	<include path="jp/co/ais/trans2/model/program/ProgramManager.dicon" />
+    <include path="jp/co/ais/trans2/model/program/SystemDivisionManager.dicon" />
+	<include path="jp/co/ais/trans2/model/close/CloseManager.dicon" />
+	<include path="jp/co/ais/trans2/model/close/CloseDao.dicon" />
+	<include path="jp/co/ais/trans2/model/close/DailyClose.dicon" />
+	<include path="jp/co/ais/trans2/model/close/MonthlyClose.dicon" />
+	<include path="jp/co/ais/trans2/model/management/Management1Manager.dicon" />
+	<include path="jp/co/ais/trans2/model/management/Management2Manager.dicon" />
+	<include path="jp/co/ais/trans2/model/management/Management3Manager.dicon" />
+	<include path="jp/co/ais/trans2/model/management/Management4Manager.dicon" />
+	<include path="jp/co/ais/trans2/model/management/Management5Manager.dicon" />
+	<include path="jp/co/ais/trans2/model/management/Management6Manager.dicon" />
+	<include path="jp/co/ais/trans2/model/item/ItemManager.dicon" />
+	<include path="jp/co/ais/trans2/model/userunlock/UserUnLockManager.dicon" />
+	<include path="jp/co/ais/trans2/model/department/DepartmentManager.dicon" />
+	<include path="jp/co/ais/trans2/model/customer/CustomerManager.dicon" />
+	<include path="jp/co/ais/trans2/model/employee/EmployeeManager.dicon" />
+	<include path="jp/co/ais/trans2/model/tax/ConsumptionTaxManager.dicon" />
+	<include path="jp/co/ais/trans2/model/currency/CurrencyManager.dicon" />
+	<include path="jp/co/ais/trans2/model/currency/RateManager.dicon" />
+	<include path="jp/co/ais/trans2/model/currency/RateConverter.dicon" />
+	<include path="jp/co/ais/trans2/model/remark/RemarkManager.dicon" />
+	<include path="jp/co/ais/trans2/model/language/LanguageManager.dicon" />
+	<include path="jp/co/ais/trans2/model/save/SaveManager.dicon" />
+    <include path="jp/co/ais/trans2/model/slip/SlipFleetMovementChecker.dicon" />
+	<include path="jp/co/ais/trans2/model/slip/SlipManager.dicon" />
+	<include path="jp/co/ais/trans2/model/slip/SlipTypeManager.dicon" />
+    <include path="jp/co/ais/trans2/model/slip/SlipLogic.dicon" />
+	<include path="jp/co/ais/trans2/model/slip/SlipExclusiveManager.dicon" />
+	<include path="jp/co/ais/trans2/model/slip/TempTableNameGetterSetting.dicon" />
+	<include path="jp/co/ais/trans2/model/balance/BalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/model/payment/BankAccountManager.dicon" />
+	<include path="jp/co/ais/trans2/model/payment/PaymentMethodManager.dicon" />
+	<include path="jp/co/ais/trans2/model/payment/PaymentSettingManager.dicon" />
+	<include path="jp/co/ais/trans2/model/payment/PaymentManager.dicon" />
+	<include path="jp/co/ais/trans2/model/payment/PaymentPolicyDataDao.dicon" />
+	<include path="jp/co/ais/trans2/model/payment/PaymentPolicyManager.dicon" />
+	<include path="jp/co/ais/trans2/model/company/InterCompanyTransferManager.dicon" />
+	<include path="jp/co/ais/trans2/model/bill/BillTypeManager.dicon" />
+	<include path="jp/co/ais/trans2/model/bill/ReceivePolicyManager.dicon" />
+	<include path="jp/co/ais/trans2/model/customer/CustomerDao.dicon" />
+	<include path="jp/co/ais/trans2/model/bank/BankManager.dicon" />
+	<include path="jp/co/ais/trans2/model/bank/BankMergeManager.dicon" />
+	<include path="jp/co/ais/trans2/common/model/file/FileManager.dicon" />
+	<include path="jp/co/ais/trans2/common/model/file/FileRecordDao.dicon" />
+	<include path="jp/co/ais/trans2/model/remittance/RemittanceManager.dicon" />
+	<include path="jp/co/ais/trans2/model/item/summary/ItemSummaryManager.dicon" />
+    <include path="jp/co/ais/trans2/model/country/CountryManager.dicon" />
+    <include path="jp/co/ais/trans2/model/bs/BSEraseManager.dicon" />
+    <include path="jp/co/ais/trans2/model/vessel/VesselManager.dicon" />
+    <include path="jp/co/ais/trans2/model/voyage/VoyageManager.dicon" />
+    <include path="jp/co/ais/trans2/model/port/PortManager.dicon" />
+    <include path="jp/co/ais/trans2/model/calendar/CalendarManager.dicon" />
+    <include path="jp/co/ais/trans2/model/slip/SlipAttachmentManager.dicon" />
+    <include path="jp/co/ais/trans2/model/history/ApproveHistoryManager.dicon" />
+    <include path="jp/co/ais/trans2/model/tag/TagManager.dicon" /> <!-- NEW -->
+    <include path="jp/co/ais/trans2/model/slip/SlipTagManager.dicon" /> <!-- NEW -->
+    <include path="jp/co/ais/trans2/model/lockout/LockOutManager.dicon" />
+    <include path="jp/co/ais/trans2/model/passwordupdate/PasswordUpdateManager.dicon" />
+    <include path="jp/co/ais/trans2/model/releasedfile/ReleasedFileManager.dicon" /> <!-- NEW -->
+ 	<include path="jp/co/ais/trans2/model/department/DepartmentOrganizationManager.dicon" />
+	<include path="jp/co/ais/trans2/model/company/CompanyOrganizationManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/model/item/AutomaticJournalItemManager.dicon" />
+    <include path="jp/co/ais/trans2/model/check/CheckMasterUseDao.dicon" />
+    <include path="jp/co/ais/trans2/model/slip/SlipUnLockManager.dicon" />
+    
+    <include path="jp/co/ais/trans2/model/executedlog/ExecutedLogManager.dicon" />
+
+    <include path="jp/co/ais/trans2/model/aprvrole/AprvRoleManager.dicon" />
+
+	<include path="jp/co/ais/trans2/model/tag/TagManager.dicon" />
+    <include path="jp/co/ais/trans2/model/slip/panel/SlipPanelLogic.dicon" />
+    
+    <include path="jp/co/ais/trans2/model/exclusive/ExclusiveDetailManager.dicon" />
+    <include path="jp/co/ais/trans2/model/vessel/VesselCOManager.dicon" />
+    <include path="jp/co/ais/trans/logic/util/ARAutoControlDao.dicon" />
+
+    <!-- bizutil -->
+	<include path="jp/co/ais/trans/logic/util/AutoControl.dicon" />
+	<include path="jp/co/ais/trans/logic/util/CurrencyConvert.dicon" />
+	
+    <!-- operator -->
+    <include path="jp/co/ais/trans2/model/bunkertype/BunkerTypeManager.dicon" />
+    <include path="jp/co/ais/trans2/model/code/CodeManager.dicon" />
+    <include path="jp/co/ais/trans2/model/cargo/CargoManager.dicon" />
+    <include path="jp/co/ais/trans2/op/model/item/OPItemManager.dicon" />
+	<include path="jp/co/ais/trans/logic/util/OPAutoControlDao.dicon" />
+    <include path="jp/co/ais/trans2/model/port/SummerTimeManager.dicon" />
+	<!-- operator and liner -->
+    <include path="jp/co/ais/trans2/model/mlit/item/YJItemManager.dicon" />
+    <include path="jp/co/ais/trans2/model/mlit/region/YJRegionManager.dicon" />
+    <include path="jp/co/ais/trans2/model/mlit/region/YJRegionManager.dicon" />
+
+</components>

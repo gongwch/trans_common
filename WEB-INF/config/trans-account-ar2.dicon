@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components>
+	<include path="jp/co/ais/trans2/ar/model/slip/InputARSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/slip/ReceivingSlipListManager.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositDataDao.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositDetailGetter.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositServiceManager.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositStatusManager.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositStatusDao.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositSlipIssuer.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/DepositServiceFactory.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/ErasingResultGetter.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/OtherSystemDepositDataChecker.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/deposit/OtherSystemDepositDataConverter.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/balance/AccountReceivableBalanceDao.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/balance/AccountReceivableBalanceManager.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/balance/AccountReceivableBalanceBookGetter.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/balance/AccountReceivableBalanceDetailBookGetter.dicon" />
+	
+    <include path="jp/co/ais/trans2/ar/model/balance/ARBalanceAgingDao.dicon" />
+    <include path="jp/co/ais/trans2/ar/model/balance/ARBalanceAgingManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/ar/model/balance/CashInDelayDetailGetter.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/balance/AccountReceivableMonthlyScheduleGetter.dicon" />
+
+	<include path="jp/co/ais/trans2/ar/model/accept/JournalDepositDataManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/ar/model/invoice/InvoiceLayoutGetter.dicon" />
+	<include path="jp/co/ais/trans2/ar/model/invoice/InvoiceLayoutManager.dicon" />
+	
+    <include path="jp/co/ais/trans2/model/slip/panel/ARSlipPanelLogic.dicon" />
+
+</components>

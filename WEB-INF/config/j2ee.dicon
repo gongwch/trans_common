@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+<components namespace="j2ee">
+	<component name="transactionManager"
+		class="org.seasar.extension.jta.TransactionManagerImpl"/>
+	<component name="requiredTx"
+		class="org.seasar.extension.tx.RequiredInterceptor"/>
+	<component name="requiresNewTx"
+		class="org.seasar.extension.tx.RequiresNewInterceptor"/>
+	<component name="mandatoryTx"
+		class="org.seasar.extension.tx.MandatoryInterceptor"/>
+	<component name="notSupportedTx"
+		class="org.seasar.extension.tx.NotSupportedInterceptor"/>
+		
+	<!--
+	<component class="org.seasar.extension.jdbc.impl.BasicResultSetFactory"/>
+	<component class="org.seasar.extension.jdbc.impl.BasicStatementFactory"/>
+	-->
+	<component class="org.seasar.extension.jdbc.impl.OracleResultSetFactory"/>
+	<component class="org.seasar.extension.jdbc.impl.BooleanToIntStatementFactory"/>
+
+	<component name="xaDataSource"
+		class="org.seasar.extension.dbcp.impl.TRANS2DataSourceImpl">
+		<property name="driverClassName">
+            "oracle.jdbc.driver.OracleDriver"
+        </property>
+        <property name="URL">
+            "jdbc:oracle:thin:@192.168.1.27:1521:ORCL11GR2"
+        </property>
+        <property name="user">"TRANS_ENHANCE"</property>
+        <property name="password">"TRANS_ENHANCE"</property>
+    <!--
+            "oracle.jdbc.driver.OracleDriver"
+        </property>
+        <property name="URL">
+            "jdbc:oracle:thin:@192.168.1.27:1521:ORCL11GR2"
+        </property>
+        <property name="user">"TRANS_ENHANCE"</property>
+        <property name="password">"TRANS_ENHANCE"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@192.168.2.20:1521:orcl"
+            "jdbc:oracle:thin:@192.168.1.27:1521:ORCL11GR2"
+        </property>
+        <property name="user">"TRANS_ENHANCE"</property>
+        <property name="password">"TRANS_ENHANCE"</property>
+        <property name="user">"KOKUKA_HON"</property>
+        <property name="password">"KOKUKA_HON"</property>
+        <property name="user">"KOKUKA"</property>
+        <property name="password">"KOKUKA"</property>
+        <property name="user">"TRANS_ASAHI"</property>
+        <property name="password">"TRANS_ASAHI"</property>
+        <property name="user">"TRANS_ENHANCE"</property>
+        <property name="password">"TRANS_ENHANCE"</property>
+            "jdbc:oracle:thin:@192.168.2.20:1521:ORCL"
+        <property name="user">"SSN"</property>
+        <property name="password">"SSN"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@192.168.1.27:1521:ORCL11GR2"
+        </property>
+        <property name="user">"MCS_E"</property>
+        <property name="password">"MCS_E"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.47:1521:XE"
+        </property>
+        <property name="user">"ISS_FA22"</property>
+        <property name="password">"ISS_FA22"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.93.20:1521:orcl"
+        </property>
+        <property name="user">"KMB"</property>
+        <property name="password">"KMB"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.254:1521:TRANS"
+        </property>
+        <property name="user">"TAMAI_S2"</property>
+        <property name="password">"TAMAI_S2"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.93.20:1521:orcl"
+        </property>
+        <property name="user">"SANO"</property>
+        <property name="password">"SANO"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.23:1521:ORCL10G"
+        </property>
+        <property name="user">"AIS_KEIRI2_TEST"</property>
+        <property name="password">"AIS_KEIRI2_TEST"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.45:1521:ORCL"
+        </property>
+        <property name="user">"TRANS2_2"</property>
+        <property name="password">"TRANS2_2"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.20:1521:ORCL10G"
+        </property>
+        <property name="user">"MKSY_NW"</property>
+        <property name="password">"MKSY_NW"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.254:1521:TRANS"
+        </property>
+        <property name="user">"CSL"</property>
+        <property name="password">"CSL"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.23:1521:ORCL10G"
+        </property>
+        <property name="user">"AIS_KEIRI2"</property>
+        <property name="password">"AIS_KEIRI2"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.27:1521:ORCL11GR2"
+        </property>
+        <property name="user">"ASAHI"</property>
+        <property name="password">"ASAHI"</property>
+        <property name="URL">
+            "jdbc:oracle:thin:@104.54.95.27:1521:ORCL11GR2"
+        </property>
+        <property name="user">"TRANS_ENHANCE"</property>
+        <property name="password">"TRANS_ENHANCE"</property>
+    -->
+	</component>
+
+	
+	<component name="connectionPool"
+		class="org.seasar.extension.dbcp.impl.ConnectionPoolImpl">
+		<property name="timeout">600</property>
+		<property name="maxPoolSize">10</property>
+		<property name="allowLocalTx">true</property>
+		<destroyMethod name="close"/>
+	</component>
+	<component name="dataSource"
+		class="org.seasar.extension.dbcp.impl.DataSourceImpl"/>
+
+</components>

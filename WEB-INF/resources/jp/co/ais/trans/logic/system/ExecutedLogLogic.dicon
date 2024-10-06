@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+
+	<component name="ExecutedLogLogic" instance="prototype" class="jp.co.ais.trans.logic.system.impl.ExecutedLogLogicImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>requiredTx</aspect>
+	</component>	
+
+	<component name="PRG_MSTDao" class="jp.co.ais.trans.master.dao.PRG_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="ExecutedLogDao" class="jp.co.ais.trans.master.dao.ExecutedLogDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	
+	
+	
+</components>

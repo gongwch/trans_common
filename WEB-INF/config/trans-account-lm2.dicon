@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>	
+	<include path="jp/co/ais/trans2/lm/model/purpose/PurposeManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/loan/PaymentScheduleLedgerManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/loan/PaymentScheduleLedgerDao.dicon" />
+	<include path="jp/co/ais/trans2/lm/logic/loan/BaseLoanInfoLogic.dicon" />
+	<include path="jp/co/ais/trans2/lm/logic/loan/LoanInfoManagerLogic.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/config/LmInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/journal/LMJournalCheckDao.dicon"/>
+	<include path="jp/co/ais/trans2/lm/model/info/LmManagementInfoManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/borrow/BorrowManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/borrow/BorrowSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/repay/RepayManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/repay/RepaySlipManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/close/ClosingManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/slip/LmSlipManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/slip/SlipFactory.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/longshort/LongShortGetter.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/longshort/LongShortManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/payints/PayIntsDtlGetter.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/payints/PayIntsDtlManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/paymentchange/PaymentChangeGetter.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/paymentchange/PaymentChangeManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/termInts/TermInterestsGetter.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/termInts/TermInterestsManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/keyrate/KeyRateManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/balance/LoanBalanceListManager.dicon" />
+	<include path="jp/co/ais/trans2/lm/model/balance/LoanBalanceListDao.dicon" />
+    <include path="jp/co/ais/trans2/lm/model/loan/LoanRegistryDao.dicon" />
+    <include path="jp/co/ais/trans2/lm/model/loan/LoanRegistryManager.dicon" />
+    <include path="jp/co/ais/trans2/lm/model/payints/PayIntsDtlBbcManager.dicon" />
+    <include path="jp/co/ais/trans2/lm/model/payints/PayIntsDtlBbcGetter.dicon" />
+</components>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-account-pc.dicon        * -->
+<!-- ********************************* -->
+
+<components>
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedCashFlowSummaryLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/SegmentConversionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedCompanyPolicyLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedIncreaseDecreaseReasonLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/GroupCompanyLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedCashFlowLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedItemSystemNameLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedItemConversionLogic.dicon" />
+
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedCustomerLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedItemLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedAdjustmentJournalizingDivisionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedBreakDownLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedCustomerConversionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedItemSummaryMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/ConsolidatedSubLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/SegmentDivision1Logic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/SegmentDivision2Logic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/info/dicon/SegmentDivision3Logic.dicon" />
+
+	<!-- eland   Start        -->
+	<include path="jp/co/ais/trans/account/pc/logic/report/JournalizingCheckListLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/report/ConsolidatedTrialBalanceOutputInstructionLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/report/ConsolidatedStatementOfCashFlowsOutputInstructionLogic.dicon" />
+    <include path="jp/co/ais/trans/account/pc/logic/report/SegmentInfoLogic.dicon" />
+	<include path="jp/co/ais/trans/account/pc/common/logic/PCInformationLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/pc/logic/another/AnotherSystemDataReceiptLogic.dicon" />
+    <include path="jp/co/ais/trans/account/pc/logic/another/JournalBalanceUptakeLogicGLImpl.dicon" />
+    <include path="jp/co/ais/trans/account/pc/logic/another/UptakeDataReceiptLogic.dicon" />
+    <include path="jp/co/ais/trans/account/pc/logic/another/AnotherSystemDataCheckLogic.dicon" />
+	<!-- eland      End     --> 
+
+	<include path="jp/co/ais/trans/account/pc/logic/journal/AdjustmentJournal.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/report/data/PKG_PC0050.dicon" />
+	<include path="jp/co/ais/trans/account/pc/logic/report/data/PRO_PC_COM.dicon" />
+
+</components>

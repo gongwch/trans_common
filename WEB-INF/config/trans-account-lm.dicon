@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<!-- ********************************* -->
+<!-- * trans-account-lm.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+
+	<include path="jp/co/ais/trans/account/lm/logic/BorrowedMoneyBasicsSettingLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/PurposeMasterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/loan/LoanInfoManagerLogic.dicon" />
+	
+	<include path="jp/co/ais/trans/account/lm/logic/journal/SettlingProcessingLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/journal/ReturnJournalLogic.dicon" />	
+	<include path="jp/co/ais/trans/account/lm/logic/journal/JournalRecordRegisterLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/journal/BorrowedJournalLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/journal/JournalMakeLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/journal/LongShortTrsferJournalLogic.dicon" />
+	<include path="jp/co/ais/trans/account/lm/logic/journal/InterestTrsferReversJournalLogic.dicon"/>
+	<include path="jp/co/ais/trans/account/lm/logic/report/PayInterestBreakdownReportLogic.dicon"/>
+	<include path="jp/co/ais/trans/account/lm/logic/report/LongShortTrsferListReportLogic.dicon"/>
+	<include path="jp/co/ais/trans/account/lm/logic/report/RepayInterestPayScheduleReportLogic.dicon"/>
+	<include path="jp/co/ais/trans/account/lm/logic/report/RepayInterestPayChgeListReportLogic.dicon"/>
+</components>

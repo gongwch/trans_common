@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="MS932" standalone="no"?>
+<jardesc>
+    <jar path="trans-common2.2/jar/trans-commons-images.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/trans-common2.2/jar/makejar_images.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/trans-common2.2/jar/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=trans-common2.2/WEB-INF\/src\/resources&lt;images"/>
+    </selectedElements>
+</jardesc>

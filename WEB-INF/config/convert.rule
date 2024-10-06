@@ -1,0 +1,8 @@
+NVL\s?\(	IFNULL(
+nvl\s?\(	IFNULL(
+Nvl\s?\(	IFNULL(
+AVOIDNULL\s?\(	IFNULL(
+Avoidnull\s?\(	IFNULL(
+AvoidNull\s?\(	IFNULL(
+avoidNull\s?\(	IFNULL(
+avoidnull\s?\(	IFNULL(

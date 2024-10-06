@@ -1,0 +1,16 @@
+UPDATE KJL_MST SET
+KAI_CODE = /*dto.KAI_CODE*/,
+KJL_USR_ID = /*dto.KJL_USR_ID*/,
+KJL_KMT_CODE = /*dto.KJL_KMT_CODE*/,
+KJL_DPK_SSK = /*dto.KJL_DPK_SSK*/,
+KJL_LVL = /*dto.KJL_LVL*/,
+KJL_UP_DEP_CODE = /*dto.KJL_UP_DEP_CODE*/,
+KJL_DEP_CODE = /*dto.KJL_DEP_CODE*/,
+INP_DATE = /*dto.INP_DATE*/,
+UPD_DATE = /*dto.UPD_DATE*/,
+PRG_ID = /*dto.PRG_ID*/,
+USR_ID = /*dto.USR_ID*/
+WHERE KAI_CODE = /*dto.KAI_CODE*/
+AND KJL_USR_ID = /*dto.KJL_USR_ID*/
+AND KJL_KMT_CODE = /*dto.KJL_KMT_CODE*/
+AND KJL_DPK_SSK = /*dto.KJL_DPK_SSK*/

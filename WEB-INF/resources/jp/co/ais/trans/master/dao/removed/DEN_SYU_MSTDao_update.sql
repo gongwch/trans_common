@@ -1,0 +1,19 @@
+UPDATE DEN_SYU_MST SET
+KAI_CODE = /*dto.KAI_CODE*/,
+DEN_SYU_CODE = /*dto.DEN_SYU_CODE*/,
+SYS_KBN = /*dto.SYS_KBN*/,
+DEN_SYU_NAME = /*dto.DEN_SYU_NAME*/,
+DEN_SYU_NAME_S = /*dto.DEN_SYU_NAME_S*/,
+DEN_SYU_NAME_K = /*dto.DEN_SYU_NAME_K*/,
+DATA_KBN = /*dto.DATA_KBN*/,
+TA_SYS_KBN = /*dto.TA_SYS_KBN*/,
+DAT_SAIBAN_FLG = /*dto.DAT_SAIBAN_FLG*/,
+TANI = /*dto.TANI*/,
+ZEI_KBN = /*dto.ZEI_KBN*/,
+SWK_IN_KBN = /*dto.SWK_IN_KBN*/,
+INP_DATE = /*dto.INP_DATE*/,
+UPD_DATE = /*dto.UPD_DATE*/,
+PRG_ID = /*dto.PRG_ID*/,
+USR_ID = /*dto.USR_ID*/
+WHERE KAI_CODE = /*dto.KAI_CODE*/
+AND DEN_SYU_CODE = /*dto.DEN_SYU_CODE*/

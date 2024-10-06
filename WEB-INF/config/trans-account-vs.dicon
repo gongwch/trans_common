@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<components>
+	<include path="jp/co/ais/trans2/vs/logic/TradeNoManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/logic/ValuableSecuritiesGetter.dicon" />
+
+	<include path="jp/co/ais/trans2/vs/logic/bookValueReport/BookValueReportGetter.dicon" />
+	<include path="jp/co/ais/trans2/vs/logic/bookValueReport/BookValueReportManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/vs/logic/ledger/ValuableSecuritiesLedgerGetter.dicon" />
+	<include path="jp/co/ais/trans2/vs/logic/ledger/ValuableSecuritiesLedgerManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/vs/manager/acquisition/AcquisitionOrSellingActionManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/manager/amortization/VsAmortizationManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/manager/baseInfoEdit/BaseInfoEditManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/manager/markToMarket/VsMarkToMarketManager.dicon" />
+
+	<include path="jp/co/ais/trans2/vs/model/book/VsBookMstManager.dicon" />
+	
+	<include path="jp/co/ais/trans2/vs/model/category/SecuritiesCategoryConfigByBookDao.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/category/SecuritiesCategoryDao.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/category/SecuritiesCategoryManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/category/VsItemGroupDao.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/category/VsItemGroupManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/excluding/VsExcludingDao.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/excluding/VsExcludingManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/securities/manager/VsBaseDtlManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/securities/manager/VsTradeDtlManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/slip/longShortSwitching/LongShortSwitchingManager.dicon" />
+	<include path="jp/co/ais/trans2/vs/model/slip/trade/VsAutoSlipManager.dicon" />
+	
+</components>

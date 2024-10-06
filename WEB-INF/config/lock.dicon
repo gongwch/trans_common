@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"https://www.seasar.org/dtd/components21.dtd">
+<components>
+	<include path="aop.dicon"/>
+	<include path="dao.dicon"/>
+	
+	<component name="BAT_CTLDao" class="jp.co.ais.trans.master.dao.BAT_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="GL_SWK_HDRDao" class="jp.co.ais.trans.master.dao.GL_SWK_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="GL_SWK_PTN_HDRDao" class="jp.co.ais.trans.master.dao.GL_SWK_PTN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="AP_SWK_HDRDao" class="jp.co.ais.trans.master.dao.AP_SWK_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+		
+	<component name="AP_SWK_PTN_HDRDao" class="jp.co.ais.trans.master.dao.AP_SWK_PTN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="AR_SWK_HDRDao" class="jp.co.ais.trans.master.dao.AR_SWK_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="AR_SWK_PTN_HDRDao" class="jp.co.ais.trans.master.dao.AR_SWK_PTN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+	<component name="HAITA_CTLDao" class="jp.co.ais.trans.master.dao.HAITA_CTLDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="DEN_SYU_MSTDao" class="jp.co.ais.trans.master.dao.DEN_SYU_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+
+    <component name="SystemManager" instance="prototype" class="jp.co.ais.trans2.model.security.SystemManagerImpl">
+        <aspect>aop.traceInterceptor</aspect>
+    </component>
+	
+	<!--以下のcomponentはLM専用,使っていない場合は削除する.-->
+    <component name="LM_LOAN_HDRDao" class="jp.co.ais.trans.account.lm.dao.LM_LOAN_HDRDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="LM_USE_MSTDao" class="jp.co.ais.trans.account.lm.dao.LM_USE_MSTDao">
+		<aspect>dao.interceptor</aspect>
+	</component>
+	
+	<component name="Lock" instance="prototype" class="jp.co.ais.trans.logic.system.impl.LockImpl">
+		<aspect>aop.traceInterceptor</aspect>
+		<aspect>requiredTx</aspect>
+		
+	    <aspect pointcut="unlockAll">
+	        <component class="jp.co.ais.trans.logic.system.impl.SlipUnlock"/>
+	    </aspect>	    
+
+		<aspect pointcut="unlockPrg">
+	        <component class="jp.co.ais.trans.logic.system.impl.SlipUnlockPrg"/>
+	    </aspect>
+	    
+	    <aspect pointcut="getExclusiveSlip">
+	        <component class="jp.co.ais.trans.logic.system.impl.LockedSlip"/>
+	    </aspect>
+	    
+	    <aspect pointcut="unlockSlip">
+	        <component class="jp.co.ais.trans.logic.system.impl.UnlockSlipList"/>
+	    </aspect>
+	    
+	    <!--以下のpointcutはLM専用,使っていない場合は削除する.-->
+	    <aspect pointcut="unlockAll">
+	        <component class="jp.co.ais.trans.account.lm.logic.loan.impl.LoanSlipUnlock"/>
+	    </aspect>
+	    
+	    <aspect pointcut="unlockPrg">
+	        <component class="jp.co.ais.trans.account.lm.logic.loan.impl.LoanSlipUnlockPrg"/>
+	    </aspect>
+	    
+	     <aspect pointcut="unlockSlip">
+	        <component class="jp.co.ais.trans.account.lm.logic.loan.impl.UnlockLoanSlipList"/>
+	    </aspect>
+	    
+	      <aspect pointcut="getExclusiveSlip">
+	        <component class="jp.co.ais.trans.account.lm.logic.loan.impl.LockedLoanSlip"/>
+	    </aspect>
+	     
+	</component>
+
+</components>

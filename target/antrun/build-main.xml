@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <signjar keypass="aistrans" signedjar="D:\workspace\Code\JTest\trans-common2-2\target/trans-commons2.2_c.jar" storepass="aistrans" alias="account.information.system" jar="D:\workspace\Code\JTest\trans-common2-2\target/trans-commons2.2.jar"></signjar>
+  </target>
+</project>

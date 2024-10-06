@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"https://www.seasar.org/dtd/components.dtd">
+
+<!-- ********************************* -->
+<!-- * trans-master.dicon            * -->
+<!-- ********************************* -->
+
+<components>
+
+	<include path="jp/co/ais/trans/master/dao/alldao.dicon" />
+	<include path="jp/co/ais/trans/master/entity/allentity.dicon" />
+	
+	<include path="jp/co/ais/trans/master/logic/dicon/ApMktMstLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/AutomaticJournalizingItemLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/BankAccountLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/BankLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/BreakDownItemLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/CalendarLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/CompanyControlLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/CompanyHierarchyLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/ConsumptionTaxLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/CurrencyLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/CustomerConditionLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/CustomerLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/DepartmentHierarchyLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/DepartmentLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/EmployeeLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/EnvironmentalSettingLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/FundLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/GLControlLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/IndicationLevelLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/InterCompanyTransferLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/ItemLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/KmkTkMstLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/LanguageLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/Management1Logic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/Management2Logic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/Management3Logic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/Management4Logic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/Management5Logic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/Management6Logic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/MemoLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/PaymentMethodLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/PaymentPolicyLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/ProgramLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/RateLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/SlipTypeLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/SubItemLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/SystemDivisionLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/UserLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/UserAuthLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/LockOutLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/InputPersonLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/ManagementLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/PasswordHistoryLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/UserUnLockLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/BatchUnLockLogic.dicon" />
+	<include path="jp/co/ais/trans/master/logic/dicon/TAppropriateCompanyLogic.dicon" />
+	
+</components>
